@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aolva.com/schema/catalog.schema.json",
+  "title": "Aolva Skill Catalog",
+  "type": "object",
+  "required": ["catalogVersion","generatedAt","skills"],
+  "properties": {
+    "catalogVersion": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id","title","summary","category","version","enabledByDefault","invokePolicy","routing","requires","sha256","path"],
+        "properties": {
+          "id": { "type": "string" },
+          "sha256": { "type": "string", "description": "技能目录内容哈希,App据此判断是否需要更新。" },
+          "path": { "type": "string", "description": "相对仓库根,如 skills/autoresearch" }
+        }
+      }
+    }
+  }
+}
