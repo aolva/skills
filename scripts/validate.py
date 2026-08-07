@@ -17,13 +17,27 @@ def tier_admission(m):
     if tier not in ("own", "core", "extension"):
         msgs.append(f"tier={tier!r} 非法(own/core/extension)")
         return msgs
-    if tier in ("core", "extension") and not m.get("provenance", {}).get("upstream"):
-        msgs.append(f"{tier} 库技能必须有 provenance.upstream")
+    prov = m.get("provenance", {})
+    if tier in ("core", "extension") and not prov.get("upstream"):
+        msgs.append(f"{tier} 库技能必须有 provenance.upstream(vendor 来源)")
     if tier == "core":
         if not m.get("enabledByDefault"):
             msgs.append("core 库技能必须 enabledByDefault=true")
         if not m.get("license"):
             msgs.append("core 库技能必须有明确 license")
+    # 自研库的来源标注约束
+    if tier == "own":
+        has_upstream = bool(prov.get("upstream"))
+        has_inspired = bool(prov.get("inspiredBy"))
+        if has_upstream and has_inspired:
+            msgs.append("own 技能不得同时标注 upstream 与 inspiredBy(二选一:改造自开源 / 独立重写)")
+        if has_upstream and not prov.get("upstreamLicense"):
+            msgs.append("改造自开源(upstream)的 own 技能必须记录 upstreamLicense")
+        if has_inspired and m.get("license") == "MIT" and not has_upstream:
+            pass  # clean-room 重写可自持 MIT
+    else:
+        if prov.get("inspiredBy"):
+            msgs.append(f"{tier} 库不允许 inspiredBy 标注——非自研库只能 vendor(upstream)")
     return msgs
 
 for meta_path in sorted((ROOT / "skills").glob("*/**/meta.json")):

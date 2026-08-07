@@ -184,6 +184,13 @@
           "items": {
             "type": "string"
           }
+        },
+        "inspiredBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "独立重写(clean-room)的灵感来源 repo URL。仅 own/ 库可用;表示只吸收功能规格与设计思想,未复制任何代码/文字表达。与 upstream(许可明确的 vendor 来源)互斥标注。"
         }
       }
     },
