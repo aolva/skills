@@ -3,63 +3,198 @@
   "$id": "https://aolva.com/schema/skill.meta.schema.json",
   "title": "Aolva Skill Meta",
   "type": "object",
-  "required": ["id","title","summary","routing","invokePolicy","requires","category","version","license","provenance","enabledByDefault","entry"],
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "tier",
+    "routing",
+    "invokePolicy",
+    "requires",
+    "category",
+    "version",
+    "license",
+    "provenance",
+    "enabledByDefault",
+    "entry"
+  ],
   "additionalProperties": false,
   "properties": {
-    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
-    "title": { "type": "string" },
-    "summary": { "type": "string", "description": "One line, human-facing (库面板展示)." },
-    "category": { "enum": ["developer","daily","meta"] },
-    "version": { "type": "string" },
-    "license": { "type": "string" },
-    "enabledByDefault": { "type": "boolean", "description": "是否随App默认集内置/开启。与 invokePolicy 正交。" },
-    "entry": { "type": "string", "description": "技能入口文件,相对本目录,通常 SKILL.md" },
-
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string",
+      "description": "One line, human-facing (库面板展示)."
+    },
+    "category": {
+      "enum": [
+        "developer",
+        "daily",
+        "meta"
+      ]
+    },
+    "version": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "enabledByDefault": {
+      "type": "boolean",
+      "description": "是否随App默认集内置/开启。与 invokePolicy 正交。"
+    },
+    "entry": {
+      "type": "string",
+      "description": "技能入口文件,相对本目录,通常 SKILL.md"
+    },
     "routing": {
       "type": "object",
       "description": "面向门卫AI的路由语料。不是给人看的营销文案。",
-      "required": ["description","keywords","difficulty","modelTierHint","confidenceThreshold"],
+      "required": [
+        "description",
+        "keywords",
+        "difficulty",
+        "modelTierHint",
+        "confidenceThreshold"
+      ],
       "additionalProperties": false,
       "properties": {
-        "description": { "type": "string", "description": "何时应命中该skill——门卫据此做语义匹配。写清适用场景与不适用场景。" },
-        "keywords": { "type": "array", "items": { "type": "string" } },
-        "difficulty": { "enum": ["low","mid","high"], "description": "任务本身复杂度,供门卫定模型档位。" },
-        "modelTierHint": { "enum": ["low","mid","frontier"], "description": "建议承载模型档位。" },
-        "confidenceThreshold": { "type": "number", "minimum": 0, "maximum": 1, "description": "门卫命中置信度需≥此值才允许按 invokePolicy 处理。" }
+        "description": {
+          "type": "string",
+          "description": "何时应命中该skill——门卫据此做语义匹配。写清适用场景与不适用场景。"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "difficulty": {
+          "enum": [
+            "low",
+            "mid",
+            "high"
+          ],
+          "description": "任务本身复杂度,供门卫定模型档位。"
+        },
+        "modelTierHint": {
+          "enum": [
+            "low",
+            "mid",
+            "frontier"
+          ],
+          "description": "建议承载模型档位。"
+        },
+        "confidenceThreshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "门卫命中置信度需≥此值才允许按 invokePolicy 处理。"
+        }
       }
     },
-
     "invokePolicy": {
-      "enum": ["auto","suggest","manual"],
+      "enum": [
+        "auto",
+        "suggest",
+        "manual"
+      ],
       "description": "门卫可触及的天花板。auto=可静默注入; suggest=需向用户提议确认; manual=只能由用户主动选用,门卫不得自动触发。"
     },
     "sideEffects": {
       "type": "array",
-      "items": { "enum": ["none","reads-files","writes-files","runs-shell","network","long-running","spends-money","external-action"] }
+      "items": {
+        "enum": [
+          "none",
+          "reads-files",
+          "writes-files",
+          "runs-shell",
+          "network",
+          "long-running",
+          "spends-money",
+          "external-action"
+        ]
+      }
     },
-
     "requires": {
       "type": "object",
       "description": "统一能力调用契约。纯skill三者皆空;服务型skill在此声明依赖。",
       "additionalProperties": false,
       "properties": {
-        "services": { "type": "array", "items": { "type": "string" }, "description": "依赖的Aolva后端服务,如 ocr-service" },
-        "scopes":   { "type": "array", "items": { "type": "string" }, "description": "需要的权限范围/登录态" },
-        "mcp":      { "type": "array", "items": { "type": "string" } },
-        "tools":    { "type": "array", "items": { "type": "string" }, "description": "运行时需要的本地工具,如 git、shell" }
+        "services": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "依赖的Aolva后端服务,如 ocr-service"
+        },
+        "scopes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "需要的权限范围/登录态"
+        },
+        "mcp": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "运行时需要的本地工具,如 git、shell"
+        }
       }
     },
-
     "provenance": {
       "type": "object",
-      "required": ["upstream","upstreamLicense"],
+      "required": [
+        "upstream",
+        "upstreamLicense"
+      ],
       "additionalProperties": false,
       "properties": {
-        "upstream": { "type": ["string","null"], "description": "上游repo URL;原创skill为null" },
-        "commit": { "type": ["string","null"] },
-        "upstreamLicense": { "type": "string" },
-        "adaptations": { "type": "array", "items": { "type": "string" } }
+        "upstream": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "上游repo URL;原创skill为null"
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "upstreamLicense": {
+          "type": "string"
+        },
+        "adaptations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "own",
+        "core",
+        "extension"
+      ],
+      "description": "技能库层级: own=自研/深度重写; core=业界事实基建(高准入); extension=优质开源(按需安装)"
     }
   }
 }

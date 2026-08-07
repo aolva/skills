@@ -9,18 +9,39 @@
   "entry": "SKILL.md",
   "routing": {
     "description": "适用:任何演示文稿/幻灯片/PPT/PPTX/PPTDSL/海报/信息图任务——新建、按模板复刻、风格迁移、页面编辑;用户要求生成可继续编辑且能在 PowerPoint/WPS 里改的成品。不适用:只需聊天或纯问答、要求动画成品(本引擎不写动画)、要求把现有 pptx 反解为 pptd、需要 exotic 图表(散点/雷达/热力图等)。",
-    "keywords": ["PPT", "PPTX", "演示文稿", "幻灯片", "slides", "presentation", "PowerPoint", "海报", "信息图", "poster", "infographic", "pptd", "deck"],
+    "keywords": [
+      "PPT",
+      "PPTX",
+      "演示文稿",
+      "幻灯片",
+      "slides",
+      "presentation",
+      "PowerPoint",
+      "海报",
+      "信息图",
+      "poster",
+      "infographic",
+      "pptd",
+      "deck"
+    ],
     "difficulty": "mid",
     "modelTierHint": "frontier",
     "confidenceThreshold": 0.7
   },
   "invokePolicy": "manual",
-  "sideEffects": ["writes-files", "runs-shell", "long-running"],
+  "sideEffects": [
+    "writes-files",
+    "runs-shell",
+    "long-running"
+  ],
   "requires": {
     "services": [],
     "scopes": [],
     "mcp": [],
-    "tools": ["shell", "python3"]
+    "tools": [
+      "shell",
+      "python3"
+    ]
   },
   "provenance": {
     "upstream": "https://github.com/move-brain/open-kimi-ppt-skill",
@@ -33,5 +54,6 @@
       "新增自研 HTML 预览生成器 pptd_preview.py 替代原在线编辑器;图标改为自绘 SVG 集,图表改为原生 OOXML",
       "SKILL.md 全部改写指向自研脚本;显式声明能力边界(不支持 pptx->pptd 反解/动画/视觉质检/exotic 图表)"
     ]
-  }
+  },
+  "tier": "own"
 }

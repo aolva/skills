@@ -1,6 +1,11 @@
 {
   "catalogVersion": "2026-08-07",
-  "generatedAt": "2026-08-07T17:48:08.554790Z",
+  "generatedAt": "2026-08-07T18:11:15.557228Z",
+  "tiers": {
+    "own": "自研/深度重写技能(核心,长期维护)",
+    "core": "业界事实基建技能(默认内置)",
+    "extension": "优质开源技能(按需安装)"
+  },
   "skills": [
     {
       "id": "aolva-ppt",
@@ -8,6 +13,7 @@
       "summary": "生成可编辑 PPTD + 本地纯 Python 导出 PPTX(零 Node/浏览器/Kimi 依赖,自研引擎,不会随上游失效)。",
       "category": "daily",
       "version": "1.0.0",
+      "tier": "own",
       "enabledByDefault": true,
       "invokePolicy": "manual",
       "sideEffects": [
@@ -45,8 +51,8 @@
           "python3"
         ]
       },
-      "sha256": "c9da584d9cc86f6cd6ae8128f40b77268938a92c3144753dd0242511e81245db",
-      "path": "skills/aolva-ppt"
+      "sha256": "52a0c9237089f9c95c8ca29d2419a858975576bb8c3c80336d9119fcc14d6cb3",
+      "path": "skills/own/aolva-ppt"
     },
     {
       "id": "autoresearch",
@@ -54,6 +60,7 @@
       "summary": "设定目标+机械指标,让agent自主迭代:改一处→跑验证→变好留/变差回滚,循环到达标。",
       "category": "developer",
       "version": "0.1.0",
+      "tier": "own",
       "enabledByDefault": true,
       "invokePolicy": "manual",
       "sideEffects": [
@@ -91,8 +98,8 @@
           "shell"
         ]
       },
-      "sha256": "bf0090cbf876e133524ddfffa670a3b60b2fe8314e911d1275bffeea8e2cd168",
-      "path": "skills/autoresearch"
+      "sha256": "9e933c163c79dea9fd586b57cad03b04f674e22e06a2ccc38fd994d95321585d",
+      "path": "skills/own/autoresearch"
     }
   ]
 }

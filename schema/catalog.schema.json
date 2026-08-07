@@ -3,20 +3,64 @@
   "$id": "https://aolva.com/schema/catalog.schema.json",
   "title": "Aolva Skill Catalog",
   "type": "object",
-  "required": ["catalogVersion","generatedAt","skills"],
+  "required": [
+    "catalogVersion",
+    "generatedAt",
+    "skills"
+  ],
   "properties": {
-    "catalogVersion": { "type": "string" },
-    "generatedAt": { "type": "string" },
+    "catalogVersion": {
+      "type": "string"
+    },
+    "generatedAt": {
+      "type": "string"
+    },
     "skills": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id","title","summary","category","version","enabledByDefault","invokePolicy","routing","requires","sha256","path"],
+        "required": [
+          "id",
+          "title",
+          "summary",
+          "category",
+          "version",
+          "enabledByDefault",
+          "invokePolicy",
+          "routing",
+          "requires",
+          "sha256",
+          "path",
+          "tier"
+        ],
         "properties": {
-          "id": { "type": "string" },
-          "sha256": { "type": "string", "description": "技能目录内容哈希,App据此判断是否需要更新。" },
-          "path": { "type": "string", "description": "相对仓库根,如 skills/autoresearch" }
+          "id": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "description": "技能目录内容哈希,App据此判断是否需要更新。"
+          },
+          "path": {
+            "type": "string",
+            "description": "相对仓库根,如 skills/autoresearch"
+          },
+          "tier": {
+            "type": "string",
+            "enum": [
+              "own",
+              "core",
+              "extension"
+            ]
+          }
         }
+      }
+    },
+    "tiers": {
+      "type": "object",
+      "description": "三层技能库的说明(own/core/extension)",
+      "additionalProperties": {
+        "type": "string"
       }
     }
   }

@@ -9,18 +9,39 @@
   "entry": "SKILL.md",
   "routing": {
     "description": "适用:用户想在一个有客观数字指标的目标上反复优化——提升测试覆盖率、压低p99延迟、减小包体积、把lint/类型错误清零、跑基准找最优实现。触发前必须能确定一个可机械验证的指标和一条verify命令。不适用:一次性问答、无客观指标的主观创作、用户只是随口一问没有优化意图——这类绝不要自动拉起本skill。",
-    "keywords": ["优化","迭代","基准","benchmark","覆盖率","coverage","延迟","latency","包体积","调优","自动修复","optimize","iterate"],
+    "keywords": [
+      "优化",
+      "迭代",
+      "基准",
+      "benchmark",
+      "覆盖率",
+      "coverage",
+      "延迟",
+      "latency",
+      "包体积",
+      "调优",
+      "自动修复",
+      "optimize",
+      "iterate"
+    ],
     "difficulty": "high",
     "modelTierHint": "frontier",
     "confidenceThreshold": 0.75
   },
   "invokePolicy": "manual",
-  "sideEffects": ["writes-files","runs-shell","long-running"],
+  "sideEffects": [
+    "writes-files",
+    "runs-shell",
+    "long-running"
+  ],
   "requires": {
     "services": [],
     "scopes": [],
     "mcp": [],
-    "tools": ["git","shell"]
+    "tools": [
+      "git",
+      "shell"
+    ]
   },
   "provenance": {
     "upstream": "https://github.com/uditgoenka/autoresearch",
@@ -31,5 +52,6 @@
       "锁定上游版本,由 scripts/sync-upstream.sh 拉取并回填 commit",
       "invokePolicy 设为 manual:长时自治+会改文件/执行命令,门卫不得静默触发"
     ]
-  }
+  },
+  "tier": "own"
 }
