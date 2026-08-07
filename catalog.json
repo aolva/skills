@@ -1,6 +1,6 @@
 {
   "catalogVersion": "2026-08-07",
-  "generatedAt": "2026-08-07T18:53:15.747356Z",
+  "generatedAt": "2026-08-07T18:56:32.650028Z",
   "tiers": {
     "own": "自研/深度重写技能(核心,长期维护)",
     "core": "业界事实基建技能(默认内置)",
@@ -86,6 +86,47 @@
       },
       "sha256": "e7c8f418d37676e6464daa284b1fad298642045e1bb37038ba1ce269021390da",
       "path": "skills/own/aolva-api-test"
+    },
+    {
+      "id": "aolva-audio-ops",
+      "title": "音频配音 · Audio Ops",
+      "summary": "旁白/配音/音频剪辑与格式处理:脚本先行、分段合成、试听质检,绑定本地算力与平台 TTS。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "runs-shell",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:配音/旁白/TTS/剪音频/格式转换/音视频合成,需要脚本确认与试听质检。不适用:无音频需求的任务。",
+        "keywords": [
+          "配音",
+          "旁白",
+          "TTS",
+          "语音",
+          "音频",
+          "剪辑",
+          "audio",
+          "voiceover"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4e7a07430c7e29234a8277487de68635e2366a37ae89f97cc8d539b62c96ea1f",
+      "path": "skills/own/aolva-audio-ops"
     },
     {
       "id": "aolva-billing-ops",
@@ -364,6 +405,47 @@
       },
       "sha256": "18299ae1052c1621dfa9f758e52da5be148fe13d5b258a00dcd366fc5cf0b5a5",
       "path": "skills/own/aolva-identity-ops"
+    },
+    {
+      "id": "aolva-image-ops",
+      "title": "图像生成 · Image Ops",
+      "summary": "统一出图/改图/图生图流程:结构化提示词五要素,绑定 ai-gateway 多模态与本地编辑,产出可复检。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:生成图片/改图/配图/图生图/风格化/批量出图,需要可复现可质检。不适用:无图像需求的纯文本任务。",
+        "keywords": [
+          "图像",
+          "图片",
+          "生成",
+          "image",
+          "配图",
+          "图生图",
+          "风格化",
+          "海报",
+          "AI绘图"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "frontier",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "2c1eceba3b14a7762acbdf2e13189d991bf51dfe9ba5132cc8a5840c45e18adc",
+      "path": "skills/own/aolva-image-ops"
     },
     {
       "id": "aolva-llm-gateway",
@@ -694,6 +776,46 @@
       },
       "sha256": "ac85944dc3252a88236860e23ece2e595c87df6b6165f107c143f4c9858ddcb8",
       "path": "skills/own/aolva-web-research"
+    },
+    {
+      "id": "aolva-xlsx-ops",
+      "title": "Excel 表格 · Xlsx Ops",
+      "summary": "纯 Python 生成/编辑 xlsx:数据表格/样式/公式/多 sheet,零第三方依赖可离线复现。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files",
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "适用:生成Excel/导出表格/改表格/报表/对账表,需要可复现、数据准确。不适用:纯数据问答(走 data-analyze)。",
+        "keywords": [
+          "Excel",
+          "xlsx",
+          "表格",
+          "报表",
+          "导出",
+          "对账",
+          "spreadsheet",
+          "sheet"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "5964a5b3004e0e819ed5997afc64a25a4d1cdb124a49e672c81fa667eebc67aa",
+      "path": "skills/own/aolva-xlsx-ops"
     },
     {
       "id": "autoresearch",
@@ -1673,6 +1795,92 @@
       "path": "skills/extension/agent-sort"
     },
     {
+      "id": "ai-act-readiness",
+      "title": "ai-act-readiness",
+      "summary": "/cs:ai-act-readiness <system> — EU AI Act 6-question forcing interrogation. Use …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "/cs:ai-act-readiness <system> — EU AI Act 6-question forcing interrogation. Use during AI-system intake, before EU deployment, or during annual compliance refresh as Article 113 obligations phase in (2025-02-02 / 2025-08-02 / 2026-08-02 / 2027-08-02).",
+        "keywords": [
+          "ai-act-readiness",
+          "system",
+          "act",
+          "question",
+          "forcing",
+          "interrogation",
+          "during",
+          "ai-system",
+          "intake",
+          "before",
+          "deployment",
+          "annual"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "96ec0f604ee4b792e07e2de43f719f242363cc99e5c29e7b5d29f8ca3a39ae23",
+      "path": "skills/extension/ai-act-readiness"
+    },
+    {
+      "id": "aims-audit",
+      "title": "aims-audit",
+      "summary": "/cs:aims-audit <scope> — ISO/IEC 42001 AIMS internal-audit 6-question forcing in…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "/cs:aims-audit <scope> — ISO/IEC 42001 AIMS internal-audit 6-question forcing interrogation. Use before certification stage 1, before annual internal audit cycles, or when onboarding a new AI system into an existing AIMS.",
+        "keywords": [
+          "aims-audit",
+          "scope",
+          "iso",
+          "iec",
+          "aims",
+          "internal-audit",
+          "question",
+          "forcing",
+          "interrogation",
+          "before",
+          "certification",
+          "stage"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "82ed4f6977729a4da5566c0e77da822d3ad021b97fb81edb27de2ff79df6c7cc",
+      "path": "skills/extension/aims-audit"
+    },
+    {
       "id": "api-design-reviewer",
       "title": "api-design-reviewer",
       "summary": "Comprehensive REST API design review with automated linting, breaking-change det…",
@@ -2272,6 +2480,49 @@
       },
       "sha256": "c89ecc1fed188d6b77e5dc206387f60a1fa9c8a29baacbe38acdf6637b9a3117",
       "path": "skills/extension/competitive-report-structure"
+    },
+    {
+      "id": "compliance-readiness",
+      "title": "compliance-readiness",
+      "summary": "/cs:compliance-readiness <program> — Multi-framework compliance officer 6-questi…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "/cs:compliance-readiness <program> — Multi-framework compliance officer 6-question forcing interrogation of any compliance program. Use before starting a new framework, planning the annual audit calendar, or preparing for certification stage 1.",
+        "keywords": [
+          "compliance-readiness",
+          "program",
+          "multi-framework",
+          "compliance",
+          "officer",
+          "question",
+          "forcing",
+          "interrogation",
+          "before",
+          "starting",
+          "new",
+          "framework"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "7326e4631fe55bfdd34a4bf4b5b1966d2e66be7ec22315924005bf5eda0e0584",
+      "path": "skills/extension/compliance-readiness"
     },
     {
       "id": "content-engine",
@@ -3087,6 +3338,49 @@
       "path": "skills/extension/fal-ai-media"
     },
     {
+      "id": "fda-qsr-audit-prep",
+      "title": "fda-qsr-audit-prep",
+      "summary": "/cs:fda-qsr-audit-prep <scope> — FDA 21 CFR 820 (QSR / QMSR) audit 6-question fo…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "/cs:fda-qsr-audit-prep <scope> — FDA 21 CFR 820 (QSR / QMSR) audit 6-question forcing interrogation. Post-Feb 2026 substantially harmonized with ISO 13485. Use before annual internal QSR audit, pre-FDA-inspection readiness, or Form 483 response.",
+        "keywords": [
+          "fda-qsr-audit-prep",
+          "scope",
+          "fda",
+          "cfr",
+          "qsr",
+          "qmsr",
+          "audit",
+          "question",
+          "forcing",
+          "interrogation",
+          "post-feb",
+          "substantially"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "a894063712cf8c7fb6523e9e3f25a774c442a030851bf60a9bd10d150a4646c2",
+      "path": "skills/extension/fda-qsr-audit-prep"
+    },
+    {
       "id": "feature-flags-architect",
       "title": "feature-flags-architect",
       "summary": "Use when adding, retiring, or auditing feature flags. Triggers on \"add a flag\", …",
@@ -3257,6 +3551,49 @@
       },
       "sha256": "7a01e9121710bff3ccd4b2f8024bd89eebcc7de8792d1109a863051fc77660af",
       "path": "skills/extension/full-page-screenshot"
+    },
+    {
+      "id": "gdpr-audit-prep",
+      "title": "gdpr-audit-prep",
+      "summary": "/cs:gdpr-audit-prep <scope> — GDPR audit 6-question Article-cited forcing interr…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "/cs:gdpr-audit-prep <scope> — GDPR audit 6-question Article-cited forcing interrogation. Use before annual internal GDPR review, post-breach internal audit, DPA investigation readiness, or acquisition due diligence.",
+        "keywords": [
+          "gdpr-audit-prep",
+          "scope",
+          "gdpr",
+          "audit",
+          "question",
+          "article-cited",
+          "forcing",
+          "interrogation",
+          "before",
+          "annual",
+          "internal",
+          "review"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "2d6e39865801b547db1031ae22e0ca8a0b46dbb102ecf1e244292cf108ede1e7",
+      "path": "skills/extension/gdpr-audit-prep"
     },
     {
       "id": "git-worktree-manager",
@@ -3601,6 +3938,92 @@
       },
       "sha256": "324092b9c19bacf799c870d41feee60f13bb4fc1708a776326b457e0b9aed867",
       "path": "skills/extension/investor-outreach"
+    },
+    {
+      "id": "iso13485-audit-prep",
+      "title": "iso13485-audit-prep",
+      "summary": "/cs:iso13485-audit-prep <scope> — ISO 13485 QMS audit 6-question forcing interro…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "/cs:iso13485-audit-prep <scope> — ISO 13485 QMS audit 6-question forcing interrogation. Design controls + CAPA + post-market focused. Use before Clause 8.2.4 internal audit, MDR / FDA QSR alignment review, or product-launch DHF closure audit.",
+        "keywords": [
+          "iso13485-audit-prep",
+          "scope",
+          "iso",
+          "qms",
+          "audit",
+          "question",
+          "forcing",
+          "interrogation",
+          "design",
+          "controls",
+          "capa",
+          "post-market"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "10ac5d46de66c87de68b7a995f16535bb1901105d81d043d6b8f7a3438fb8b54",
+      "path": "skills/extension/iso13485-audit-prep"
+    },
+    {
+      "id": "iso27001-audit-prep",
+      "title": "iso27001-audit-prep",
+      "summary": "/cs:iso27001-audit-prep <scope> — ISO 27001 ISMS audit readiness 6-question forc…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "/cs:iso27001-audit-prep <scope> — ISO 27001 ISMS audit readiness 6-question forcing interrogation. Use before annual Clause 9.2 internal audit, surveillance audit prep, or stage 1 certification readiness.",
+        "keywords": [
+          "iso27001-audit-prep",
+          "scope",
+          "iso",
+          "isms",
+          "audit",
+          "readiness",
+          "question",
+          "forcing",
+          "interrogation",
+          "before",
+          "annual",
+          "clause"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "12dfd6aec5861dad162475fc8b1e902055a41a161256941d4d46de53e45b3845",
+      "path": "skills/extension/iso27001-audit-prep"
     },
     {
       "id": "landing-page-generator",
@@ -5734,6 +6157,49 @@
       },
       "sha256": "f0bde0ab4ff4146bc616632f4a5e8edf4e17dfabd60bf3ab5cd313d837d723b8",
       "path": "skills/extension/slo-architect"
+    },
+    {
+      "id": "soc2-audit-prep",
+      "title": "soc2-audit-prep",
+      "summary": "/cs:soc2-audit-prep <scope> — SOC 2 Type II readiness 6-question forcing interro…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "/cs:soc2-audit-prep <scope> — SOC 2 Type II readiness 6-question forcing interrogation. Observation-period focused. Use before Type II observation begins, mid-period checkpoint, or pre-field-test month-10 readiness.",
+        "keywords": [
+          "soc2-audit-prep",
+          "scope",
+          "soc",
+          "type",
+          "readiness",
+          "question",
+          "forcing",
+          "interrogation",
+          "observation-period",
+          "focused",
+          "before",
+          "observation"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "2ccf5d6c27ff41ac2a99462698dfb36477e1ba70b33bc97392d44f5332a41ef7",
+      "path": "skills/extension/soc2-audit-prep"
     },
     {
       "id": "spec-driven-workflow",

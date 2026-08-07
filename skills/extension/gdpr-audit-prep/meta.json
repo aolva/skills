@@ -1,0 +1,52 @@
+{
+  "id": "gdpr-audit-prep",
+  "title": "gdpr-audit-prep",
+  "summary": "/cs:gdpr-audit-prep <scope> — GDPR audit 6-question Article-cited forcing interr…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "/cs:gdpr-audit-prep <scope> — GDPR audit 6-question Article-cited forcing interrogation. Use before annual internal GDPR review, post-breach internal audit, DPA investigation readiness, or acquisition due diligence.",
+    "keywords": [
+      "gdpr-audit-prep",
+      "scope",
+      "gdpr",
+      "audit",
+      "question",
+      "article-cited",
+      "forcing",
+      "interrogation",
+      "before",
+      "annual",
+      "internal",
+      "review"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/alirezarezvani/claude-skills",
+    "commit": "aa8d778811a557a2c28ccadda4cf3d0bd028a4cc",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

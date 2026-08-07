@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-xlsx-ops",
+  "title": "Excel 表格 · Xlsx Ops",
+  "summary": "纯 Python 生成/编辑 xlsx:数据表格/样式/公式/多 sheet,零第三方依赖可离线复现。",
+  "category": "daily",
+  "sideEffects": [
+    "writes-files",
+    "runs-shell"
+  ],
+  "routing": {
+    "description": "适用:生成Excel/导出表格/改表格/报表/对账表,需要可复现、数据准确。不适用:纯数据问答(走 data-analyze)。",
+    "keywords": [
+      "Excel",
+      "xlsx",
+      "表格",
+      "报表",
+      "导出",
+      "对账",
+      "spreadsheet",
+      "sheet"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}

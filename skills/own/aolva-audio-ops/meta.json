@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-audio-ops",
+  "title": "音频配音 · Audio Ops",
+  "summary": "旁白/配音/音频剪辑与格式处理:脚本先行、分段合成、试听质检,绑定本地算力与平台 TTS。",
+  "category": "daily",
+  "sideEffects": [
+    "network",
+    "runs-shell",
+    "writes-files"
+  ],
+  "routing": {
+    "description": "适用:配音/旁白/TTS/剪音频/格式转换/音视频合成,需要脚本确认与试听质检。不适用:无音频需求的任务。",
+    "keywords": [
+      "配音",
+      "旁白",
+      "TTS",
+      "语音",
+      "音频",
+      "剪辑",
+      "audio",
+      "voiceover"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}

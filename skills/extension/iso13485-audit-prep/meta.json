@@ -1,0 +1,52 @@
+{
+  "id": "iso13485-audit-prep",
+  "title": "iso13485-audit-prep",
+  "summary": "/cs:iso13485-audit-prep <scope> — ISO 13485 QMS audit 6-question forcing interro…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "/cs:iso13485-audit-prep <scope> — ISO 13485 QMS audit 6-question forcing interrogation. Design controls + CAPA + post-market focused. Use before Clause 8.2.4 internal audit, MDR / FDA QSR alignment review, or product-launch DHF closure audit.",
+    "keywords": [
+      "iso13485-audit-prep",
+      "scope",
+      "iso",
+      "qms",
+      "audit",
+      "question",
+      "forcing",
+      "interrogation",
+      "design",
+      "controls",
+      "capa",
+      "post-market"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/alirezarezvani/claude-skills",
+    "commit": "aa8d778811a557a2c28ccadda4cf3d0bd028a4cc",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

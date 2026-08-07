@@ -1,0 +1,52 @@
+{
+  "id": "compliance-readiness",
+  "title": "compliance-readiness",
+  "summary": "/cs:compliance-readiness <program> — Multi-framework compliance officer 6-questi…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "/cs:compliance-readiness <program> — Multi-framework compliance officer 6-question forcing interrogation of any compliance program. Use before starting a new framework, planning the annual audit calendar, or preparing for certification stage 1.",
+    "keywords": [
+      "compliance-readiness",
+      "program",
+      "multi-framework",
+      "compliance",
+      "officer",
+      "question",
+      "forcing",
+      "interrogation",
+      "before",
+      "starting",
+      "new",
+      "framework"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/alirezarezvani/claude-skills",
+    "commit": "aa8d778811a557a2c28ccadda4cf3d0bd028a4cc",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

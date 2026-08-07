@@ -1,0 +1,52 @@
+{
+  "id": "iso27001-audit-prep",
+  "title": "iso27001-audit-prep",
+  "summary": "/cs:iso27001-audit-prep <scope> — ISO 27001 ISMS audit readiness 6-question forc…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "/cs:iso27001-audit-prep <scope> — ISO 27001 ISMS audit readiness 6-question forcing interrogation. Use before annual Clause 9.2 internal audit, surveillance audit prep, or stage 1 certification readiness.",
+    "keywords": [
+      "iso27001-audit-prep",
+      "scope",
+      "iso",
+      "isms",
+      "audit",
+      "readiness",
+      "question",
+      "forcing",
+      "interrogation",
+      "before",
+      "annual",
+      "clause"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/alirezarezvani/claude-skills",
+    "commit": "aa8d778811a557a2c28ccadda4cf3d0bd028a4cc",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-image-ops",
+  "title": "图像生成 · Image Ops",
+  "summary": "统一出图/改图/图生图流程:结构化提示词五要素,绑定 ai-gateway 多模态与本地编辑,产出可复检。",
+  "category": "daily",
+  "sideEffects": [
+    "network",
+    "writes-files"
+  ],
+  "routing": {
+    "description": "适用:生成图片/改图/配图/图生图/风格化/批量出图,需要可复现可质检。不适用:无图像需求的纯文本任务。",
+    "keywords": [
+      "图像",
+      "图片",
+      "生成",
+      "image",
+      "配图",
+      "图生图",
+      "风格化",
+      "海报",
+      "AI绘图"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "frontier",
+    "confidenceThreshold": 0.75
+  }
+}

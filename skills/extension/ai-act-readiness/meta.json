@@ -1,0 +1,52 @@
+{
+  "id": "ai-act-readiness",
+  "title": "ai-act-readiness",
+  "summary": "/cs:ai-act-readiness <system> — EU AI Act 6-question forcing interrogation. Use …",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "/cs:ai-act-readiness <system> — EU AI Act 6-question forcing interrogation. Use during AI-system intake, before EU deployment, or during annual compliance refresh as Article 113 obligations phase in (2025-02-02 / 2025-08-02 / 2026-08-02 / 2027-08-02).",
+    "keywords": [
+      "ai-act-readiness",
+      "system",
+      "act",
+      "question",
+      "forcing",
+      "interrogation",
+      "during",
+      "ai-system",
+      "intake",
+      "before",
+      "deployment",
+      "annual"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/alirezarezvani/claude-skills",
+    "commit": "aa8d778811a557a2c28ccadda4cf3d0bd028a4cc",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}
