@@ -1,7 +1,53 @@
 {
-  "catalogVersion": "2026-07-30",
-  "generatedAt": "2026-07-31T03:25:35.444504Z",
+  "catalogVersion": "2026-08-07",
+  "generatedAt": "2026-08-07T17:35:08.509074Z",
   "skills": [
+    {
+      "id": "aolva-ppt",
+      "title": "PPT/演示文稿 · Aolva PPT",
+      "summary": "生成可编辑 PPTD + 本地纯 Python 导出 PPTX(零 Node/浏览器/Kimi 依赖,自研引擎,不会随上游失效)。",
+      "category": "daily",
+      "version": "1.0.0",
+      "enabledByDefault": true,
+      "invokePolicy": "manual",
+      "sideEffects": [
+        "writes-files",
+        "runs-shell",
+        "long-running"
+      ],
+      "routing": {
+        "description": "适用:任何演示文稿/幻灯片/PPT/PPTX/PPTDSL/海报/信息图任务——新建、按模板复刻、风格迁移、页面编辑;用户要求生成可继续编辑且能在 PowerPoint/WPS 里改的成品。不适用:只需聊天或纯问答、要求动画成品(本引擎不写动画)、要求把现有 pptx 反解为 pptd、需要 exotic 图表(散点/雷达/热力图等)。",
+        "keywords": [
+          "PPT",
+          "PPTX",
+          "演示文稿",
+          "幻灯片",
+          "slides",
+          "presentation",
+          "PowerPoint",
+          "海报",
+          "信息图",
+          "poster",
+          "infographic",
+          "pptd",
+          "deck"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "frontier",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell",
+          "python3"
+        ]
+      },
+      "sha256": "c52f62ce6e3a9ffdf3044112990a57dacc71a967da3afcd80a1f694e4ec4bdb3",
+      "path": "skills/aolva-ppt"
+    },
     {
       "id": "autoresearch",
       "title": "自动研究 · Autoresearch",
