@@ -1,12 +1,288 @@
 {
   "catalogVersion": "2026-08-07",
-  "generatedAt": "2026-08-07T18:31:47.023947Z",
+  "generatedAt": "2026-08-07T18:40:34.003835Z",
   "tiers": {
     "own": "自研/深度重写技能(核心,长期维护)",
     "core": "业界事实基建技能(默认内置)",
     "extension": "优质开源技能(按需安装)"
   },
   "skills": [
+    {
+      "id": "aolva-api-test",
+      "title": "API 测试 · API Test",
+      "summary": "HTTP 接口契约核对与测试用例生成执行:正常/边界/鉴权/幂等全覆盖,报告可复现。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:测接口/写接口测试/联调,需要成体系用例与结论。不适用:纯前端或无需 API 的任务。",
+        "keywords": [
+          "API",
+          "接口测试",
+          "联调",
+          "OpenAPI",
+          "测试用例",
+          "契约",
+          "curl"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "e7c8f418d37676e6464daa284b1fad298642045e1bb37038ba1ce269021390da",
+      "path": "skills/own/aolva-api-test"
+    },
+    {
+      "id": "aolva-code-review",
+      "title": "代码审查 · Code Review",
+      "summary": "按安全/正确性/性能/可维护性优先级审查变更,输出带严重度的可执行问题清单。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:审查 PR/找 bug/评估代码质量,需要系统化清单与可落地修复建议。不适用:纯风格偏好讨论。",
+        "keywords": [
+          "code review",
+          "代码审查",
+          "PR 审查",
+          "找bug",
+          "安全",
+          "质量",
+          "review"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "frontier",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "868f377e3fec911047e806f31047319df7ad6154c42192b08de18778dcf43f8b",
+      "path": "skills/own/aolva-code-review"
+    },
+    {
+      "id": "aolva-data-analyze",
+      "title": "数据分析 · Data Analyze",
+      "summary": "CSV/JSON 数据的探索、清洗、统计分析与可视化,全部数字脚本化可复核。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:分析数据文件/算统计/发现规律/做图表,需要可复核结论。不适用:无数据的纯讨论。",
+        "keywords": [
+          "数据分析",
+          "CSV",
+          "JSON",
+          "统计",
+          "探索",
+          "可视化",
+          "清洗",
+          "data"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "b9c399d6ef881ee63850a414c26d18016fbedffb834e1a004a654180e7788a59",
+      "path": "skills/own/aolva-data-analyze"
+    },
+    {
+      "id": "aolva-doc-qa",
+      "title": "文档理解 · Doc QA",
+      "summary": "PDF/Office/扫描件的内容抽取、问答与转换,答案必带出处,对接 Nurbell 文档智能。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "reads-files",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:读文档找答案/抽取信息/摘要/转格式(合同、报告、论文、表格)。不适用:无需文档输入的一般问答。",
+        "keywords": [
+          "文档",
+          "PDF",
+          "OCR",
+          "抽取",
+          "问答",
+          "摘要",
+          "转换",
+          "doc",
+          "document"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "30b32ee40a3e3e08634129a038e6ecd89c4b433ff497b3f8d2cd86c92ef32eea",
+      "path": "skills/own/aolva-doc-qa"
+    },
+    {
+      "id": "aolva-git-ops",
+      "title": "Git 工作流 · Git Ops",
+      "summary": "统一 git 操作规范:分支策略/提交信息/PR 流程/冲突与回滚,历史整洁可回溯。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:任何涉及 git 的操作(提交/分支/PR/合并/回滚/冲突),需要规范执行。不适用:无需版本管理的单文件草稿。",
+        "keywords": [
+          "git",
+          "分支",
+          "commit",
+          "PR",
+          "merge",
+          "回滚",
+          "冲突",
+          "提交规范"
+        ],
+        "difficulty": "low",
+        "modelTierHint": "low",
+        "confidenceThreshold": 0.8
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "a3a8075b1894f7bd71102c1ef25282e0c8e34cf02ab2c5743c3a3a42a2681768",
+      "path": "skills/own/aolva-git-ops"
+    },
+    {
+      "id": "aolva-llm-gateway",
+      "title": "LLM 网关 · Aolva AI Gateway",
+      "summary": "对接 Platform ai-gateway(LiteLLM 底座)的统一模型调用:档位选型/请求契约/限流降级,禁止绕过网关直连。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:任何'调用大模型/生成文本/让 AI 处理'类任务,需走 Aolva 平台统一 ai-gateway;任务分级选模型、限流降级。不适用:用户明确要用特定供应商直连。",
+        "keywords": [
+          "ai-gateway",
+          "LLM",
+          "模型调用",
+          "LiteLLM",
+          "网关",
+          "降级",
+          "限流",
+          "模型档位"
+        ],
+        "difficulty": "low",
+        "modelTierHint": "low",
+        "confidenceThreshold": 0.8
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "0b6141d7c28d2a7c7022c8e46855ff5a9e5205d16baf6d4f99cad675e93d5df5",
+      "path": "skills/own/aolva-llm-gateway"
+    },
+    {
+      "id": "aolva-local-compute",
+      "title": "本地算力 · Local Compute",
+      "summary": "MacBook Pro 128G 本地推理/embedding/批处理调度:能本地跑不上云,成本可控可离线。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:embedding/批量推理/离线任务/省云费用,本地模型够用就本地跑。不适用:需要前沿模型能力的复杂推理(走网关)。",
+        "keywords": [
+          "本地算力",
+          "ollama",
+          "mlx",
+          "embedding",
+          "离线推理",
+          "批处理",
+          "Mac",
+          "local"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "low",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell",
+          "python3"
+        ]
+      },
+      "sha256": "22e2b19b4231342e9e2e0e58fe0d13f93eda54ac152d6827846bcb7616098bc9",
+      "path": "skills/own/aolva-local-compute"
+    },
     {
       "id": "aolva-ppt",
       "title": "PPT/演示文稿 · Aolva PPT",
@@ -53,6 +329,46 @@
       },
       "sha256": "52a0c9237089f9c95c8ca29d2419a858975576bb8c3c80336d9119fcc14d6cb3",
       "path": "skills/own/aolva-ppt"
+    },
+    {
+      "id": "aolva-web-research",
+      "title": "网页研究 · Web Research",
+      "summary": "多源抓取、交叉验证、逐条事实标注来源,输出可追溯的结构化研究报告。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files",
+        "network"
+      ],
+      "routing": {
+        "description": "适用:调研/查资料/竞品对比/行业综述/写带来源的文章,要求结论可追溯。不适用:一次性闲聊式问答(不需要证据链)。",
+        "keywords": [
+          "调研",
+          "research",
+          "查资料",
+          "综述",
+          "竞品",
+          "来源",
+          "证据",
+          "对比"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "ac85944dc3252a88236860e23ece2e595c87df6b6165f107c143f4c9858ddcb8",
+      "path": "skills/own/aolva-web-research"
     },
     {
       "id": "autoresearch",
@@ -102,6 +418,135 @@
       "path": "skills/own/autoresearch"
     },
     {
+      "id": "api-design",
+      "title": "api-design",
+      "summary": "REST API design patterns including resource naming, status codes, pagination, fi…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.",
+        "keywords": [
+          "rest",
+          "api",
+          "design",
+          "patterns",
+          "including",
+          "resource",
+          "naming",
+          "status",
+          "codes",
+          "pagination",
+          "filtering",
+          "error"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "6610e95be6f3cb2e7458ae419b7098bba2816a9100cc60f946db07105a357c64",
+      "path": "skills/core/api-design"
+    },
+    {
+      "id": "backend-patterns",
+      "title": "backend-patterns",
+      "summary": "Backend architecture patterns, API design, database optimization, and server-sid…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+        "keywords": [
+          "backend",
+          "architecture",
+          "patterns",
+          "api",
+          "design",
+          "database",
+          "optimization",
+          "server-side",
+          "best",
+          "practices",
+          "node",
+          "express"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "3e8c4f656067aa64c840690e5ac974e45f2efcfedf90232b3a14103f5f4e6701",
+      "path": "skills/core/backend-patterns"
+    },
+    {
+      "id": "browser-automation",
+      "title": "浏览器自动化",
+      "summary": "Use when the user asks to automate browser tasks, scrape websites, fill forms, c…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to automate browser tasks, scrape websites, fill forms, capture screenshots, extract structured data from web pages, or build web automation workflows. NOT for testing — use playwright-pro for that.",
+        "keywords": [
+          "asks",
+          "automate",
+          "browser",
+          "tasks",
+          "scrape",
+          "websites",
+          "fill",
+          "forms",
+          "capture",
+          "screenshots",
+          "extract",
+          "structured"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "1373db5b74035edb24161bd2a58b8d8f779829c828c0f7adafa5c690d0278183",
+      "path": "skills/core/browser-automation"
+    },
+    {
       "id": "caveman",
       "title": "极简表达 · Caveman",
       "summary": "压缩输出 token 约 65% 的沟通模式(支持 lite/full/ultra 与文言文档位),降本增效。",
@@ -135,6 +580,223 @@
       },
       "sha256": "a02f0baaaba9a914a5b755f97c34327ce15fffc823b4325915c4d7df9e420e88",
       "path": "skills/core/caveman"
+    },
+    {
+      "id": "coding-standards",
+      "title": "coding-standards",
+      "summary": "Baseline cross-project coding conventions for naming, readability, immutability,…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns.",
+        "keywords": [
+          "baseline",
+          "cross-project",
+          "coding",
+          "conventions",
+          "naming",
+          "readability",
+          "immutability",
+          "code-quality",
+          "review",
+          "detailed",
+          "frontend",
+          "backend"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "07ed88c88c7adb4aaa7148b01f73b7b7c3fe4c3defaabb52e3d6343810c2c439",
+      "path": "skills/core/coding-standards"
+    },
+    {
+      "id": "deep-research",
+      "title": "deep-research",
+      "summary": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synth…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.",
+        "keywords": [
+          "multi-source",
+          "deep",
+          "research",
+          "firecrawl",
+          "exa",
+          "mcps",
+          "searches",
+          "web",
+          "synthesizes",
+          "findings",
+          "delivers",
+          "cited"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "7ccd8b07f81c2188a07d8700e42b5dcd65a30686d295d8ccecb02c6446c757f3",
+      "path": "skills/core/deep-research"
+    },
+    {
+      "id": "e2e-testing",
+      "title": "e2e-testing",
+      "summary": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integra…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies.",
+        "keywords": [
+          "playwright",
+          "e2e",
+          "testing",
+          "patterns",
+          "page",
+          "object",
+          "model",
+          "configuration",
+          "integration",
+          "artifact",
+          "management",
+          "flaky"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "ae0b9083a185e38745839e0f56af122b9f4b9b7ab8680df845fe88b1c7b230a9",
+      "path": "skills/core/e2e-testing"
+    },
+    {
+      "id": "exa-search",
+      "title": "exa-search",
+      "summary": "Neural search via Exa MCP for web, code, and company research. Use when the user…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Neural search via Exa MCP for web, code, and company research. Use when the user needs web search, code examples, company intel, people lookup, or AI-powered deep research with Exa's neural search engine.",
+        "keywords": [
+          "neural",
+          "search",
+          "exa",
+          "mcp",
+          "web",
+          "code",
+          "company",
+          "research",
+          "needs",
+          "examples",
+          "intel",
+          "people"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "3e5d45e42cbe5150503435a2d1e8683712e63a149c23c3087e318fa13b3a9a15",
+      "path": "skills/core/exa-search"
+    },
+    {
+      "id": "frontend-patterns",
+      "title": "frontend-patterns",
+      "summary": "Frontend development patterns for React, Next.js, state management, performance …",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
+        "keywords": [
+          "frontend",
+          "development",
+          "patterns",
+          "react",
+          "next",
+          "state",
+          "management",
+          "performance",
+          "optimization",
+          "best",
+          "practices",
+          "frontend-patterns"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "302d91fa618a641e9184879508de1da47448dd473665fd1fd68384b50a638757",
+      "path": "skills/core/frontend-patterns"
     },
     {
       "id": "huashu-design",
@@ -178,6 +840,135 @@
       "path": "skills/core/huashu-design"
     },
     {
+      "id": "md-document",
+      "title": "Markdown 文档编写",
+      "summary": "Converts long-form markdown (specs, RFCs, reports, plans, explainers) into a sin…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Converts long-form markdown (specs, RFCs, reports, plans, explainers) into a single-file, lightly-interactive HTML document with sticky TOC, scrollspy, search filter, code-copy buttons, and design-system-driven brand tokens. Triggers when the markdown-html-orchestrator classifies an input as DOCUMENT, or when invoked directly via /cs:md-document. Reads the design-system config via config_loader.py and inlines the user's 12 derived CSS custom properties; refuses to render if onboarding hasn't run. Single-file output — Google Fonts + Prism.js CDN are the only externals; no framework runtime, no build step. Use after orchestrator routing or after design-system onboarding is confirmed.",
+        "keywords": [
+          "converts",
+          "long-form",
+          "markdown",
+          "specs",
+          "rfcs",
+          "reports",
+          "plans",
+          "explainers",
+          "single-file",
+          "lightly-interactive",
+          "html",
+          "document"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "b065665c839cd01e47a8c433ca15e9d90d0c7f0388072804d5aa4a5cada6b3c3",
+      "path": "skills/core/md-document"
+    },
+    {
+      "id": "mle-workflow",
+      "title": "mle-workflow",
+      "summary": "Production machine-learning engineering workflow for data contracts, reproducibl…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Production machine-learning engineering workflow for data contracts, reproducible training, model evaluation, deployment, monitoring, and rollback. Use when building, reviewing, or hardening ML systems beyond one-off notebooks.",
+        "keywords": [
+          "production",
+          "machine-learning",
+          "engineering",
+          "workflow",
+          "data",
+          "contracts",
+          "reproducible",
+          "training",
+          "model",
+          "evaluation",
+          "deployment",
+          "monitoring"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "5b4d519c311181d90c0409a6f952e327bdce4c8d895293529d3e8e90e1229b03",
+      "path": "skills/core/mle-workflow"
+    },
+    {
+      "id": "plan-canvas",
+      "title": "plan-canvas",
+      "summary": "Open plans and HTML artifacts in a local browser canvas where the human annotate…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Open plans and HTML artifacts in a local browser canvas where the human annotates elements, chats, and approves or requests changes without leaving the page. Use when presenting a plan for review, or when feedback like \"move this, change that\" is easier pointed at than typed.",
+        "keywords": [
+          "open",
+          "plans",
+          "html",
+          "artifacts",
+          "local",
+          "browser",
+          "canvas",
+          "where",
+          "human",
+          "annotates",
+          "elements",
+          "chats"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "8ac80d786253f3b7d73aa97f31bb06166b72a58240ccc46d3a878ba30f831b35",
+      "path": "skills/core/plan-canvas"
+    },
+    {
       "id": "planning-with-files",
       "title": "文件化规划 · Planning with Files",
       "summary": "多步任务落成 task_plan/findings/progress 文件,防上下文丢失,清会话后自动恢复。",
@@ -217,6 +1008,667 @@
       },
       "sha256": "c2b71d5840d86c365410cb6de3dca5bb61de6f7d05121e145f0d9a19caca3d81",
       "path": "skills/core/planning-with-files"
+    },
+    {
+      "id": "playwright-skill",
+      "title": "Playwright 浏览器自动化",
+      "summary": "Complete browser automation with Playwright. Auto-detects dev servers, writes cl…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, test login flows, check links, automate any browser task. Use when user wants to test websites, automate browser interactions, validate web functionality, or perform any browser-based testing.",
+        "keywords": [
+          "complete",
+          "browser",
+          "automation",
+          "playwright",
+          "auto-detects",
+          "dev",
+          "servers",
+          "writes",
+          "clean",
+          "test",
+          "scripts",
+          "tmp"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "665cc794cd634e237095e8965c6904bfca63fb920a58382504fe6c8ec9d5804b",
+      "path": "skills/core/playwright-skill"
+    },
+    {
+      "id": "security-review",
+      "title": "security-review",
+      "summary": "Use this skill when adding authentication, handling user input, working with sec…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+        "keywords": [
+          "adding",
+          "authentication",
+          "handling",
+          "input",
+          "working",
+          "secrets",
+          "creating",
+          "api",
+          "endpoints",
+          "implementing",
+          "payment",
+          "sensitive"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "0b71dfb67fd86c17cb6fe3eea0e1dd05439f8af0795e0a54234c44703643330a",
+      "path": "skills/core/security-review"
+    },
+    {
+      "id": "sql-database-assistant",
+      "title": "SQL 数据库助手",
+      "summary": "Use when the user asks to write SQL queries, optimize database performance, gene…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "Use when the user asks to write SQL queries, optimize database performance, generate migrations, explore database schemas, or work with ORMs like Prisma, Drizzle, TypeORM, or SQLAlchemy.",
+        "keywords": [
+          "asks",
+          "write",
+          "sql",
+          "queries",
+          "optimize",
+          "database",
+          "performance",
+          "generate",
+          "migrations",
+          "explore",
+          "schemas",
+          "work"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "111cd2b463fd1452ca9e4dab1d6b60115b37099f5ab0bed095e25af51520ff04",
+      "path": "skills/core/sql-database-assistant"
+    },
+    {
+      "id": "tdd-workflow",
+      "title": "tdd-workflow",
+      "summary": "Use this skill when writing new features, fixing bugs, or refactoring code. Enfo…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.",
+        "keywords": [
+          "writing",
+          "new",
+          "features",
+          "fixing",
+          "bugs",
+          "refactoring",
+          "code",
+          "enforces",
+          "test-driven",
+          "development",
+          "coverage",
+          "including"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "d815216ce2f53951d439eae93a3f3985bbac1c07c5b39cb44821571a422ecebf",
+      "path": "skills/core/tdd-workflow"
+    },
+    {
+      "id": "unified-memory",
+      "title": "unified-memory",
+      "summary": "Share durable, inspectable context and handoffs between Claude, Codex, Hermes, C…",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Share durable, inspectable context and handoffs between Claude, Codex, Hermes, Cursor, OpenCode, and other agents through the local ECC Memory Vault. Use when an agent must save work state, transfer context, resume another agent's task, or search shared project knowledge.",
+        "keywords": [
+          "share",
+          "durable",
+          "inspectable",
+          "context",
+          "handoffs",
+          "between",
+          "claude",
+          "codex",
+          "hermes",
+          "cursor",
+          "opencode",
+          "other"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "d7ef80fae41f05df043fa678159c3f4667e796417972916003f09b1c17a909b7",
+      "path": "skills/core/unified-memory"
+    },
+    {
+      "id": "verification-loop",
+      "title": "verification-loop",
+      "summary": "A comprehensive verification system for Claude Code sessions.",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "A comprehensive verification system for Claude Code sessions.",
+        "keywords": [
+          "comprehensive",
+          "verification",
+          "system",
+          "claude",
+          "code",
+          "sessions",
+          "verification-loop"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "e5a7cea31c47021d7da9fd748bec302c7beb6aca448a8b09cc760a8d34db4f68",
+      "path": "skills/core/verification-loop"
+    },
+    {
+      "id": "agent-introspection-debugging",
+      "title": "agent-introspection-debugging",
+      "summary": "Structured self-debugging workflow for AI agent failures using capture, diagnosi…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.",
+        "keywords": [
+          "structured",
+          "self-debugging",
+          "workflow",
+          "failures",
+          "capture",
+          "diagnosis",
+          "contained",
+          "recovery",
+          "introspection",
+          "reports",
+          "agent-introspection-debugging"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "7d6785c52c1604a3a681e33887d355571499ca0dee9737244fda08bc781c8e5a",
+      "path": "skills/extension/agent-introspection-debugging"
+    },
+    {
+      "id": "agent-sort",
+      "title": "agent-sort",
+      "summary": "Build an evidence-backed ECC install plan for a specific repo by sorting skills,…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.",
+        "keywords": [
+          "build",
+          "evidence-backed",
+          "ecc",
+          "install",
+          "plan",
+          "specific",
+          "repo",
+          "sorting",
+          "commands",
+          "rules",
+          "hooks",
+          "extras"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "bfafb66aa97727492b878e9b42a2ed881d8bc65886852fe1bb490c090630ccc7",
+      "path": "skills/extension/agent-sort"
+    },
+    {
+      "id": "api-design-reviewer",
+      "title": "api-design-reviewer",
+      "summary": "Comprehensive REST API design review with automated linting, breaking-change det…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Comprehensive REST API design review with automated linting, breaking-change detection, and design scorecards. Catches inconsistent conventions, missing versioning, and design smells before APIs ship. Use when reviewing a PR that adds or changes API endpoints, auditing an existing API for v2 migration, or establishing API standards for a team.",
+        "keywords": [
+          "comprehensive",
+          "rest",
+          "api",
+          "design",
+          "review",
+          "automated",
+          "linting",
+          "breaking-change",
+          "detection",
+          "scorecards",
+          "catches",
+          "inconsistent"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "130bc1e189874147f749dd704e55cacf7dfd816502aae3e5eb535253c934b2c9",
+      "path": "skills/extension/api-design-reviewer"
+    },
+    {
+      "id": "api-test-suite-builder",
+      "title": "api-test-suite-builder",
+      "summary": "Use when the user asks to generate API tests, create integration test suites, te…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files",
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Use when the user asks to generate API tests, create integration test suites, test REST endpoints, or build contract tests.",
+        "keywords": [
+          "asks",
+          "generate",
+          "api",
+          "tests",
+          "create",
+          "integration",
+          "test",
+          "suites",
+          "rest",
+          "endpoints",
+          "build",
+          "contract"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4cf427d4c820c229a275bf4f08c8ee081397c5426fbde06d8ee464ee74bdb922",
+      "path": "skills/extension/api-test-suite-builder"
+    },
+    {
+      "id": "article-writing",
+      "title": "article-writing",
+      "summary": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the user wants polished written content longer than a paragraph, especially when voice consistency, structure, and credibility matter.",
+        "keywords": [
+          "write",
+          "articles",
+          "guides",
+          "blog",
+          "posts",
+          "tutorials",
+          "newsletter",
+          "issues",
+          "other",
+          "long-form",
+          "content",
+          "distinctive"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4049bd8165f6dd826947dc722766ded7fc2098f6bd230adc10f9f4ae99c61309",
+      "path": "skills/extension/article-writing"
+    },
+    {
+      "id": "benchmark-methodology",
+      "title": "benchmark-methodology",
+      "summary": ">-",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": ">-",
+        "keywords": [
+          "benchmark-methodology"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "215126daefca09b087040f4f83f2f5dd543f5053d98acdc2bedc0808a0b4d325",
+      "path": "skills/extension/benchmark-methodology"
+    },
+    {
+      "id": "brand-discovery",
+      "title": "brand-discovery",
+      "summary": ">-",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": ">-",
+        "keywords": [
+          "brand-discovery"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "06c46bebf0f2dcf34ed084a98a805b47f1d0a82347c5f7a4832798e54f66ba6e",
+      "path": "skills/extension/brand-discovery"
+    },
+    {
+      "id": "brand-voice",
+      "title": "brand-voice",
+      "summary": "Build a source-derived writing style profile from real posts, essays, launch not…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use when the user wants voice consistency without generic AI writing tropes.",
+        "keywords": [
+          "build",
+          "source-derived",
+          "writing",
+          "style",
+          "profile",
+          "real",
+          "posts",
+          "essays",
+          "launch",
+          "notes",
+          "docs",
+          "site"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "cf1b6f5644069513a9f274b9566fc31a90c8f494720b4356e802b7ac36a3e04f",
+      "path": "skills/extension/brand-voice"
+    },
+    {
+      "id": "bun-runtime",
+      "title": "bun-runtime",
+      "summary": "Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.",
+        "keywords": [
+          "bun",
+          "runtime",
+          "package",
+          "manager",
+          "bundler",
+          "test",
+          "runner",
+          "choose",
+          "node",
+          "migration",
+          "notes",
+          "vercel"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "18408db64e41edc5d784e9e9eb4591dc82d099fab2fae89dda70dac2d0e27f3e",
+      "path": "skills/extension/bun-runtime"
+    },
+    {
+      "id": "changelog-generator",
+      "title": "changelog-generator",
+      "summary": "Produce consistent, auditable release notes from Conventional Commits. Separates…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Produce consistent, auditable release notes from Conventional Commits. Separates commit parsing, semantic-bump logic, and changelog rendering for automated releases with editorial control. Use when cutting a release, generating CHANGELOG.md from git history, computing the next semantic version from commits, automating release notes in CI, or planning a hotfix/rollback. Examples: 'generate the changelog for v1.4.0', 'what version bump do these commits require', 'we need an emergency hotfix process'.",
+        "keywords": [
+          "produce",
+          "consistent",
+          "auditable",
+          "release",
+          "notes",
+          "conventional",
+          "commits",
+          "separates",
+          "commit",
+          "parsing",
+          "semantic-bump",
+          "logic"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "2f20c00075d382fdc98028d902e94cb07c6a89f6b141410b016204c291aadc89",
+      "path": "skills/extension/changelog-generator"
     },
     {
       "id": "chart-visualization",
@@ -259,6 +1711,1829 @@
       },
       "sha256": "2ddc0090a5dfbdd3149a5f035b5adbaf852784c59e6ad532b37feddea0b3aac9",
       "path": "skills/extension/chart-visualization"
+    },
+    {
+      "id": "ci-cd-pipeline-builder",
+      "title": "ci-cd-pipeline-builder",
+      "summary": "Generate pragmatic CI/CD pipelines from detected project stack signals — fast ba…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Generate pragmatic CI/CD pipelines from detected project stack signals — fast baseline generation, repeatable checks, environment-aware deployment stages. Use when setting up CI for a new project, refactoring existing pipelines, or standardizing deployment workflows across multiple repos.",
+        "keywords": [
+          "generate",
+          "pragmatic",
+          "pipelines",
+          "detected",
+          "project",
+          "stack",
+          "signals",
+          "fast",
+          "baseline",
+          "generation",
+          "repeatable",
+          "checks"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "b2de97039d7e4355eb9878eb44fad4532daeafa07a3188ed8db6932ee87c6965",
+      "path": "skills/extension/ci-cd-pipeline-builder"
+    },
+    {
+      "id": "citation-management",
+      "title": "citation-management",
+      "summary": "Comprehensive citation management for academic research. Search OpenAlex, PubMed…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Comprehensive citation management for academic research. Search OpenAlex, PubMed, and Google Scholar for papers, extract accurate metadata, validate citations, and generate properly formatted BibTeX entries. This skill should be used when you need to find papers, verify citation information, convert DOIs to BibTeX, or ensure reference accuracy in scientific writing.",
+        "keywords": [
+          "comprehensive",
+          "citation",
+          "management",
+          "academic",
+          "research",
+          "search",
+          "openalex",
+          "pubmed",
+          "google",
+          "scholar",
+          "papers",
+          "extract"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "18336abbd429248cf99332425e73f9bf6718adc60905377ab19d06ff1e8115d3",
+      "path": "skills/extension/citation-management"
+    },
+    {
+      "id": "code-to-prd",
+      "title": "code-to-prd",
+      "summary": "Reverse-engineer any codebase into a complete Product Requirements Document (PRD…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Reverse-engineer any codebase into a complete Product Requirements Document (PRD). Analyzes routes, components, state management, API integrations, and user interactions to produce business-readable documentation detailed enough for engineers or AI agents to fully reconstruct every page and endpoint. Works with frontend frameworks (React, Vue, Angular, Svelte, Next.js, Nuxt), backend frameworks (NestJS, Django, Express, FastAPI), and fullstack applications. Use when users mention: generate PRD, reverse-engineer requirements, code to documentation, extract product specs from code, document page logic, analyze page fields and interactions, create a functional inventory, write requirements from an existing codebase, document API endpoints, or analyze backend routes.",
+        "keywords": [
+          "reverse-engineer",
+          "codebase",
+          "complete",
+          "product",
+          "requirements",
+          "document",
+          "prd",
+          "analyzes",
+          "routes",
+          "components",
+          "state",
+          "management"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "dea3742e03c2ce6cfa6f95853707b3ecdb2c97deafd5e828d9c162e58e7fa500",
+      "path": "skills/extension/code-to-prd"
+    },
+    {
+      "id": "codebase-onboarding",
+      "title": "codebase-onboarding",
+      "summary": "Analyze a codebase and generate onboarding documentation for engineers, tech lea…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Analyze a codebase and generate onboarding documentation for engineers, tech leads, and contractors. Fast fact-gathering and repeatable onboarding outputs. Use when onboarding a new engineer, writing architecture-overview docs for a new project, or producing tech-lead briefings for unfamiliar repos.",
+        "keywords": [
+          "analyze",
+          "codebase",
+          "generate",
+          "onboarding",
+          "documentation",
+          "engineers",
+          "tech",
+          "leads",
+          "contractors",
+          "fast",
+          "fact-gathering",
+          "repeatable"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "a12a8985e0696f715f6da44f7684506da571d931588e15f64669e3fe04a62c2e",
+      "path": "skills/extension/codebase-onboarding"
+    },
+    {
+      "id": "competitive-platform-analysis",
+      "title": "competitive-platform-analysis",
+      "summary": ">-",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": ">-",
+        "keywords": [
+          "competitive-platform-analysis"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "d211a227108ac5242c673673c884ae33202cabb1dc441dffec6d9594b4025cac",
+      "path": "skills/extension/competitive-platform-analysis"
+    },
+    {
+      "id": "competitive-report-structure",
+      "title": "competitive-report-structure",
+      "summary": ">-",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": ">-",
+        "keywords": [
+          "competitive-report-structure"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "c89ecc1fed188d6b77e5dc206387f60a1fa9c8a29baacbe38acdf6637b9a3117",
+      "path": "skills/extension/competitive-report-structure"
+    },
+    {
+      "id": "content-engine",
+      "title": "content-engine",
+      "summary": "Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newslet…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform campaigns. Use when the user wants social posts, threads, scripts, content calendars, or one source asset adapted cleanly across platforms.",
+        "keywords": [
+          "create",
+          "platform-native",
+          "content",
+          "systems",
+          "linkedin",
+          "tiktok",
+          "youtube",
+          "newsletters",
+          "repurposed",
+          "multi-platform",
+          "campaigns",
+          "wants"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4fe9c54589eac0e16b2776a94548f59cc42a8935a84ce80a194c9950bb53ae1d",
+      "path": "skills/extension/content-engine"
+    },
+    {
+      "id": "crosspost",
+      "title": "crosspost",
+      "summary": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Ad…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Adapts content per platform using content-engine patterns. Never posts identical content cross-platform. Use when the user wants to distribute content across social platforms.",
+        "keywords": [
+          "multi-platform",
+          "content",
+          "distribution",
+          "across",
+          "linkedin",
+          "threads",
+          "bluesky",
+          "adapts",
+          "per",
+          "platform",
+          "content-engine",
+          "patterns"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "c3f037a488ddfc0f9f73561dae7e4ee35f9abd74e283a61ae9394048f869b5a6",
+      "path": "skills/extension/crosspost"
+    },
+    {
+      "id": "data-quality-auditor",
+      "title": "data-quality-auditor",
+      "summary": "Audit datasets for completeness, consistency, accuracy, and validity. Profile da…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Audit datasets for completeness, consistency, accuracy, and validity. Profile data distributions, detect anomalies and outliers, surface structural issues, and produce an actionable remediation plan. Use when the user asks to check data quality, profile a dataset, hunt outliers or missing values, or validate data before analysis or model training.",
+        "keywords": [
+          "audit",
+          "datasets",
+          "completeness",
+          "consistency",
+          "accuracy",
+          "validity",
+          "profile",
+          "data",
+          "distributions",
+          "detect",
+          "anomalies",
+          "outliers"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "df34b3a28b198cf12dba06a732812cfcf992fad53054fb1f0198d913630fe007",
+      "path": "skills/extension/data-quality-auditor"
+    },
+    {
+      "id": "database-designer",
+      "title": "database-designer",
+      "summary": "Use when the user asks to design database schemas, plan data migrations, optimiz…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to design database schemas, plan data migrations, optimize queries, choose between SQL and NoSQL, or model data relationships.",
+        "keywords": [
+          "asks",
+          "design",
+          "database",
+          "schemas",
+          "plan",
+          "data",
+          "migrations",
+          "optimize",
+          "queries",
+          "choose",
+          "between",
+          "sql"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "604cbda180f21fe4fd3a36dfa395dede614a038ed989818ef87f45fcde33de8f",
+      "path": "skills/extension/database-designer"
+    },
+    {
+      "id": "database-schema-designer",
+      "title": "database-schema-designer",
+      "summary": "Use when the user asks to create ERD diagrams, normalize database schemas, desig…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to create ERD diagrams, normalize database schemas, design table relationships, or plan schema migrations.",
+        "keywords": [
+          "asks",
+          "create",
+          "erd",
+          "diagrams",
+          "normalize",
+          "database",
+          "schemas",
+          "design",
+          "table",
+          "relationships",
+          "plan",
+          "schema"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "c4beea0374bcdee18c4d4c43d49744beeed3b54fe51a5610d867550eccd33f31",
+      "path": "skills/extension/database-schema-designer"
+    },
+    {
+      "id": "deep-work",
+      "title": "deep-work",
+      "summary": "Use when someone wants to plan a deep work day, time-block their calendar or tas…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when someone wants to plan a deep work day, time-block their calendar or task list, budget or cut shallow work, protect focus hours, track deep-work sessions and streaks, run an end-of-day shutdown ritual, or says \"/deep-work\" or \"/time-block\". Classifies tasks deep vs shallow, builds an energy-first time-blocked schedule that refuses deep demand past the 4-hour ceiling, batches shallow work into at most two windows, and logs focus sessions against a weekly target.",
+        "keywords": [
+          "someone",
+          "wants",
+          "plan",
+          "deep",
+          "work",
+          "day",
+          "time-block",
+          "calendar",
+          "task",
+          "list",
+          "budget",
+          "cut"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "a035e85203314354c1aa0e2eca88d96983a0ba9e4c91fce0477a0553acef07ec",
+      "path": "skills/extension/deep-work"
+    },
+    {
+      "id": "demo-video",
+      "title": "demo-video",
+      "summary": "Use when the user asks to create a demo video, product walkthrough, feature show…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to create a demo video, product walkthrough, feature showcase, animated presentation, marketing video, or GIF from screenshots or scene descriptions. Orchestrates playwright, ffmpeg, and edge-tts MCPs to produce polished video content.",
+        "keywords": [
+          "asks",
+          "create",
+          "demo",
+          "video",
+          "product",
+          "walkthrough",
+          "feature",
+          "showcase",
+          "animated",
+          "presentation",
+          "marketing",
+          "gif"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "01e99e1fe532bb842d0cba6f84047495aeb30d01166be0ed59bbb05156e4eb43",
+      "path": "skills/extension/demo-video"
+    },
+    {
+      "id": "dependency-auditor",
+      "title": "dependency-auditor",
+      "summary": "Audit and manage dependencies across multi-language projects. Identifies vulnera…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "Audit and manage dependencies across multi-language projects. Identifies vulnerabilities, license conflicts, transitive dependency risks, and safe-upgrade paths. Use when auditing third-party packages before release, investigating a CVE, planning a major version bump, or running a license-compliance review. Examples: 'audit our npm dependencies', 'do we have GPL contamination', 'plan the upgrade to React 19'.",
+        "keywords": [
+          "audit",
+          "manage",
+          "dependencies",
+          "across",
+          "multi-language",
+          "projects",
+          "identifies",
+          "vulnerabilities",
+          "license",
+          "conflicts",
+          "transitive",
+          "dependency"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "9f8ceb4b394d67d10ac0441e4f083f84969f0c8045740ec2a4865b7648aefc8b",
+      "path": "skills/extension/dependency-auditor"
+    },
+    {
+      "id": "design-system",
+      "title": "design-system",
+      "summary": "Captures the user's brand identity once via a 10-question onboarding wizard (pri…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Captures the user's brand identity once via a 10-question onboarding wizard (primary/accent HEX + heading + body Google Fonts + design style editorial/technical/minimal/playful + default output directory + syntax theme + TOC behavior + optional logo/company), validates body-text and link contrast against WCAG 2.2 AA, derives 12 CSS custom properties in HSL space, and stores the result for every markdown-html converter to consume. Use before any markdown-html conversion. Triggers on first-run onboarding (\"set up the brand\", \"configure markdown-html\", \"run onboarding\"), on explicit reset (\"reset the design system\", \"re-onboard\"), and is checked by every converter via config_loader.py before rendering. Refuses to save if body-text contrast fails AA 4.5:1 or the output dir isn't writable. Precedence: project (./.markdown-html/) > global (~/.config/markdown-html/) > built-in defaults; MARKDOWN_HTML_NO_CONFIG=1 bypasses.",
+        "keywords": [
+          "captures",
+          "brand",
+          "identity",
+          "once",
+          "question",
+          "onboarding",
+          "wizard",
+          "primary",
+          "accent",
+          "hex",
+          "heading",
+          "body"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "605edb0604001b7716d12be5dfcece5c4d91ffdeff2e0cd6de646f7e68d3c080",
+      "path": "skills/extension/design-system"
+    },
+    {
+      "id": "dmux-workflows",
+      "title": "dmux-workflows",
+      "summary": "Multi-agent orchestration using dmux (tmux pane manager for AI agents). Patterns…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Multi-agent orchestration using dmux (tmux pane manager for AI agents). Patterns for parallel agent workflows across Claude Code, Codex, OpenCode, and other harnesses. Use when running multiple agent sessions in parallel or coordinating multi-agent development workflows.",
+        "keywords": [
+          "multi-agent",
+          "orchestration",
+          "dmux",
+          "tmux",
+          "pane",
+          "manager",
+          "patterns",
+          "parallel",
+          "workflows",
+          "across",
+          "claude",
+          "code"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "406304d1cb6ee5c957d86cf1c1baad063503b74adda2f3976c579d7072132a26",
+      "path": "skills/extension/dmux-workflows"
+    },
+    {
+      "id": "docker-development",
+      "title": "docker-development",
+      "summary": "Docker and container development agent skill and plugin for Dockerfile optimizat…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Docker and container development agent skill and plugin for Dockerfile optimization, docker-compose orchestration, multi-stage builds, and container security hardening. Use when: user wants to optimize a Dockerfile, create or improve docker-compose configurations, implement multi-stage builds, audit container security, reduce image size, or follow container best practices. Covers build performance, layer caching, secret management, and production-ready container patterns.",
+        "keywords": [
+          "docker",
+          "container",
+          "development",
+          "plugin",
+          "dockerfile",
+          "optimization",
+          "docker-compose",
+          "orchestration",
+          "multi-stage",
+          "builds",
+          "security",
+          "hardening"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "82bc6ffa0679e38eb27d99de0d25f5a46b3ef9c2b9bf4d3d6a55404e089f637d",
+      "path": "skills/extension/docker-development"
+    },
+    {
+      "id": "documentation-lookup",
+      "title": "documentation-lookup",
+      "summary": "Use up-to-date library and framework docs via Context7 MCP instead of training d…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma).",
+        "keywords": [
+          "up-to-date",
+          "library",
+          "framework",
+          "docs",
+          "context7",
+          "mcp",
+          "instead",
+          "training",
+          "data",
+          "activates",
+          "setup",
+          "questions"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f6ad500be5b9fbe1d768ad45e5a5d2bb2ca4923f8ec4d5895443ee7307d74d14",
+      "path": "skills/extension/documentation-lookup"
+    },
+    {
+      "id": "docx",
+      "title": "docx",
+      "summary": "Use this skill whenever the user wants to create, read, edit, or manipulate Word…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files) or Word templates (.dotx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', '.dotx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx or .dotx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file, use this skill. Do NOT use for PDFs, spreadsheets, Google Docs, or general coding tasks unrelated to document generation.",
+        "keywords": [
+          "whenever",
+          "wants",
+          "create",
+          "read",
+          "edit",
+          "manipulate",
+          "word",
+          "documents",
+          "docx",
+          "templates",
+          "dotx",
+          "triggers"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4a29a05be6b43d2ee868ae73ad46f1ef9d13da94a5f09ac517a6b624ee5b454d",
+      "path": "skills/extension/docx"
+    },
+    {
+      "id": "env-secrets-manager",
+      "title": "env-secrets-manager",
+      "summary": "Manage environment-variable hygiene and secrets safety across local development …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Manage environment-variable hygiene and secrets safety across local development and production. Practical auditing, drift awareness, rotation readiness. Use when auditing .env files for committed secrets, planning a credential rotation, debugging missing-env-var production incidents, or hardening a new project against secrets leakage.",
+        "keywords": [
+          "manage",
+          "environment-variable",
+          "hygiene",
+          "secrets",
+          "safety",
+          "across",
+          "local",
+          "development",
+          "production",
+          "practical",
+          "auditing",
+          "drift"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "db00d80809523ae1cc383009a55081aea1a30588416b2cb357ff36e066594379",
+      "path": "skills/extension/env-secrets-manager"
+    },
+    {
+      "id": "eval-harness",
+      "title": "eval-harness",
+      "summary": "Formal evaluation framework for Claude Code sessions implementing eval-driven de…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
+        "keywords": [
+          "formal",
+          "evaluation",
+          "framework",
+          "claude",
+          "code",
+          "sessions",
+          "implementing",
+          "eval-driven",
+          "development",
+          "edd",
+          "principles",
+          "eval-harness"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "373cafa2e5f018639306496e9d73b42336239ef041908935766d37fd822df9c8",
+      "path": "skills/extension/eval-harness"
+    },
+    {
+      "id": "everything-claude-code",
+      "title": "everything-claude-code",
+      "summary": "Development conventions and patterns for everything-claude-code. JavaScript proj…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.",
+        "keywords": [
+          "development",
+          "conventions",
+          "patterns",
+          "everything-claude-code",
+          "javascript",
+          "project",
+          "conventional",
+          "commits"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "7b8d342f2fc5296e66c35039fa2031a0b2812fec7c88447e2be524d2215ddc0d",
+      "path": "skills/extension/everything-claude-code"
+    },
+    {
+      "id": "experiment-designer",
+      "title": "experiment-designer",
+      "summary": "Use when planning product experiments, writing testable hypotheses, estimating s…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when planning product experiments, writing testable hypotheses, estimating sample size, prioritizing tests, or interpreting A/B outcomes with practical statistical rigor.",
+        "keywords": [
+          "planning",
+          "product",
+          "experiments",
+          "writing",
+          "testable",
+          "hypotheses",
+          "estimating",
+          "sample",
+          "size",
+          "prioritizing",
+          "tests",
+          "interpreting"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "efa70c2c954c587df19484e7c4ed96ccee988d3163b1802f82d042f9d8ccb67a",
+      "path": "skills/extension/experiment-designer"
+    },
+    {
+      "id": "exploratory-data-analysis",
+      "title": "exploratory-data-analysis",
+      "summary": "Perform bounded, local exploratory analysis of explicitly supported scientific f…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Perform bounded, local exploratory analysis of explicitly supported scientific files. Use for redacted CSV/TSV/JSON profiles; optional NumPy, HDF5, FASTA/FASTQ, and basic image metadata inspection; missingness/leakage audits; outlier and transformation sensitivity; and rigorous EDA report scaffolds. Other domain formats are reference-only and unknown formats fail closed.",
+        "keywords": [
+          "perform",
+          "bounded",
+          "local",
+          "exploratory",
+          "analysis",
+          "explicitly",
+          "supported",
+          "scientific",
+          "redacted",
+          "csv",
+          "tsv",
+          "json"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "14bc9c86ec6a998c0ee7113cdb82358d0b103af6f228c6dd1255dde86add3861",
+      "path": "skills/extension/exploratory-data-analysis"
+    },
+    {
+      "id": "fal-ai-media",
+      "title": "fal-ai-media",
+      "summary": "Unified media generation via fal.ai MCP — image, video, and audio. Covers text-t…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "Unified media generation via fal.ai MCP — image, video, and audio. Covers text-to-image (Nano Banana), text/image-to-video (Seedance, Kling, Veo 3), text-to-speech (CSM-1B), and video-to-audio (ThinkSound). Use when the user wants to generate images, videos, or audio with AI.",
+        "keywords": [
+          "unified",
+          "media",
+          "generation",
+          "fal",
+          "mcp",
+          "image",
+          "video",
+          "audio",
+          "covers",
+          "text-to-image",
+          "nano",
+          "banana"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "a80cc802f9fed1986f2eb14471c4bc34cd3fb9bab3dda3c771497bf8beab66de",
+      "path": "skills/extension/fal-ai-media"
+    },
+    {
+      "id": "feature-flags-architect",
+      "title": "feature-flags-architect",
+      "summary": "Use when adding, retiring, or auditing feature flags. Triggers on \"add a flag\", …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when adding, retiring, or auditing feature flags. Triggers on \"add a flag\", \"ship behind a flag\", \"rollout plan\", \"kill switch\", \"stale flags\", \"flag debt\", \"LaunchDarkly\", \"GrowthBook\", \"Statsig\", \"Unleash\", \"Flipt\", or any progressive-delivery question. Ships flag debt scanner, rollout planner, and kill-switch auditor (all stdlib Python), 4 references on flag taxonomy + provider trade-offs + rollout strategies + lifecycle, plus a /flag-cleanup slash command.",
+        "keywords": [
+          "adding",
+          "retiring",
+          "auditing",
+          "feature",
+          "flags",
+          "triggers",
+          "add",
+          "flag",
+          "ship",
+          "behind",
+          "rollout",
+          "plan"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "61372bf4458c3cb0d02d64989b319f42e3d86d244708f0c8396901988c8e73bb",
+      "path": "skills/extension/feature-flags-architect"
+    },
+    {
+      "id": "focused-fix",
+      "title": "focused-fix",
+      "summary": "Use when the user asks to fix, debug, or make a specific feature/module/area wor…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to fix, debug, or make a specific feature/module/area work end-to-end. Triggers: 'make X work', 'fix the Y feature', 'the Z module is broken', 'focus on [area]'. Not for quick single-bug fixes — this is for systematic deep-dive repair across all files and dependencies.",
+        "keywords": [
+          "asks",
+          "fix",
+          "debug",
+          "make",
+          "specific",
+          "feature",
+          "module",
+          "area",
+          "work",
+          "end-to-end",
+          "triggers",
+          "broken"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "b04d917168921528ae11638b4bf44396c5b8dd5abdafa108bd07ffaa4be3ab67",
+      "path": "skills/extension/focused-fix"
+    },
+    {
+      "id": "frontend-slides",
+      "title": "frontend-slides",
+      "summary": "Create stunning, animation-rich HTML presentations from scratch or by converting…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices.",
+        "keywords": [
+          "create",
+          "stunning",
+          "animation-rich",
+          "html",
+          "presentations",
+          "scratch",
+          "converting",
+          "powerpoint",
+          "wants",
+          "build",
+          "presentation",
+          "convert"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "91812dcdfab1503f621b8be454fdddfa69661d579da3b32262e19c73447f9345",
+      "path": "skills/extension/frontend-slides"
+    },
+    {
+      "id": "full-page-screenshot",
+      "title": "full-page-screenshot",
+      "summary": "Use when the user asks to capture a full-page screenshot, long screenshot, or co…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Use when the user asks to capture a full-page screenshot, long screenshot, or complete page capture of a web page. Handles SPA scroll containers, lazy-loaded images, and very tall pages via Chrome DevTools Protocol with zero external dependencies.",
+        "keywords": [
+          "asks",
+          "capture",
+          "full-page",
+          "screenshot",
+          "long",
+          "complete",
+          "page",
+          "web",
+          "handles",
+          "spa",
+          "scroll",
+          "containers"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "7a01e9121710bff3ccd4b2f8024bd89eebcc7de8792d1109a863051fc77660af",
+      "path": "skills/extension/full-page-screenshot"
+    },
+    {
+      "id": "git-worktree-manager",
+      "title": "git-worktree-manager",
+      "summary": "Run parallel feature work safely with Git worktrees. Standardizes branch isolati…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Run parallel feature work safely with Git worktrees. Standardizes branch isolation, port allocation, environment sync, and cleanup so each worktree behaves like an independent local app. Optimized for multi-agent workflows where each agent or terminal session owns one worktree. Use when running multiple feature branches simultaneously, isolating experimental work, or coordinating multi-agent development across the same repo.",
+        "keywords": [
+          "run",
+          "parallel",
+          "feature",
+          "work",
+          "safely",
+          "git",
+          "worktrees",
+          "standardizes",
+          "branch",
+          "isolation",
+          "port",
+          "allocation"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f4563b2ed11e40c6e7524226351c1095c94102a0630fc9043b68ca522b54a925",
+      "path": "skills/extension/git-worktree-manager"
+    },
+    {
+      "id": "grants",
+      "title": "grants",
+      "summary": "NIH grant research skill for clinical researchers. Grill-me intake (research ide…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "NIH grant research skill for clinical researchers. Grill-me intake (research idea + career stage + preliminary data + environment + submission posture + known institute targets) locks down the funding strategy before any search runs. Runs a 5-facet Consensus positioning analysis (with draft Significance/Innovation language), maps the research to the right NIH institutes and study sections via RePORTER, finds NOSIs and funded overlap, and produces an editable Word document (.docx) with budget/scope-aware mechanism recommendations, submission timelines, and a mandatory program officer recommendation. Use when the user asks about research funding or makes any grant-related request (e.g., 'grants for [topic]', 'find grants for my research idea', 'what grants match my research', 'help me find NIH funding', 'grant opportunities for my research'). NIH-only scope — non-NIH funders (PCORI, DOD CDMRP, VA, foundations) are out of scope and flagged at intake.",
+        "keywords": [
+          "nih",
+          "grant",
+          "research",
+          "clinical",
+          "researchers",
+          "grill-me",
+          "intake",
+          "idea",
+          "career",
+          "stage",
+          "preliminary",
+          "data"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "e32190581ed6ebe711536925790929749096d70c228edbdca7d70ed5c254157b",
+      "path": "skills/extension/grants"
+    },
+    {
+      "id": "handoff",
+      "title": "handoff",
+      "summary": "Compact the current conversation into a handoff document for another agent to pi…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Compact the current conversation into a handoff document for another agent to pick up. References existing artifacts (PRDs, plans, ADRs, issues, commits, diffs) by path or URL instead of duplicating them. Use when user wants to hand off the conversation to a fresh agent or starts a new session that picks up prior work.",
+        "keywords": [
+          "compact",
+          "current",
+          "conversation",
+          "handoff",
+          "document",
+          "another",
+          "pick",
+          "references",
+          "existing",
+          "artifacts",
+          "prds",
+          "plans"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "1d5fc2d8160dde34ea5d37ddff860f045d429918fc2e9648e0bc376f534a87d8",
+      "path": "skills/extension/handoff"
+    },
+    {
+      "id": "helm-chart-builder",
+      "title": "helm-chart-builder",
+      "summary": "Helm chart development agent skill and plugin for Claude Code, Codex, Gemini CLI…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Helm chart development agent skill and plugin for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw — chart scaffolding, values design, template patterns, dependency management, security hardening, and chart testing. Use when: user wants to create or improve Helm charts, design values.yaml files, implement template helpers, audit chart security (RBAC, network policies, pod security), manage subcharts, or run helm lint/test.",
+        "keywords": [
+          "helm",
+          "chart",
+          "development",
+          "plugin",
+          "claude",
+          "code",
+          "codex",
+          "gemini",
+          "cli",
+          "cursor",
+          "openclaw",
+          "scaffolding"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "0ed4eb9aaa72cf129464ddbb34c9795aff26648d47009d389c5c74ab578fb1c2",
+      "path": "skills/extension/helm-chart-builder"
+    },
+    {
+      "id": "infographics",
+      "title": "infographics",
+      "summary": "Create professional infographics using Nano Banana Pro AI with smart iterative r…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Create professional infographics using Nano Banana Pro AI with smart iterative refinement. Uses Gemini 3.6 Flash for quality review. Integrates research-lookup and web search for accurate data. Supports 10 infographic types, 8 industry styles, and colorblind-safe palettes.",
+        "keywords": [
+          "create",
+          "professional",
+          "infographics",
+          "nano",
+          "banana",
+          "pro",
+          "smart",
+          "iterative",
+          "refinement",
+          "uses",
+          "gemini",
+          "flash"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "eaf87562971f920199c9d618bc2e1fb0b14945351e9a83e6b9c9988bcc6e5a99",
+      "path": "skills/extension/infographics"
+    },
+    {
+      "id": "interview-system-designer",
+      "title": "interview-system-designer",
+      "summary": "This skill should be used when the user asks to \"design interview processes\", \"c…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "This skill should be used when the user asks to \"design interview processes\", \"create hiring pipelines\", \"calibrate interview loops\", \"generate interview questions\", \"design competency matrices\", \"analyze interviewer bias\", \"create scoring rubrics\", \"build question banks\", or \"optimize hiring systems\". Use for designing role-specific interview loops, competency assessments, and hiring calibration systems.",
+        "keywords": [
+          "asks",
+          "design",
+          "interview",
+          "processes",
+          "create",
+          "hiring",
+          "pipelines",
+          "calibrate",
+          "loops",
+          "generate",
+          "questions",
+          "competency"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "1a92cee2b417a2af3fca238a60f1d859afd8a5dad43e005d9553460912c1e131",
+      "path": "skills/extension/interview-system-designer"
+    },
+    {
+      "id": "investor-materials",
+      "title": "investor-materials",
+      "summary": "Create and update pitch decks, one-pagers, investor memos, accelerator applicati…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraising materials. Use when the user needs investor-facing documents, projections, use-of-funds tables, milestone plans, or materials that must stay internally consistent across multiple fundraising assets.",
+        "keywords": [
+          "create",
+          "update",
+          "pitch",
+          "decks",
+          "one-pagers",
+          "investor",
+          "memos",
+          "accelerator",
+          "applications",
+          "financial",
+          "models",
+          "fundraising"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "91d3818a5f8601f83fe2293d9bdd9014573e26338d7e710b8296f05a164b9d82",
+      "path": "skills/extension/investor-materials"
+    },
+    {
+      "id": "investor-outreach",
+      "title": "investor-outreach",
+      "summary": "Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor co…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising. Use when the user wants outreach to angels, VCs, strategic investors, or accelerators and needs concise, personalized, investor-facing messaging.",
+        "keywords": [
+          "draft",
+          "cold",
+          "emails",
+          "warm",
+          "intro",
+          "blurbs",
+          "follow-ups",
+          "update",
+          "investor",
+          "communications",
+          "fundraising",
+          "wants"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "324092b9c19bacf799c870d41feee60f13bb4fc1708a776326b457e0b9aed867",
+      "path": "skills/extension/investor-outreach"
+    },
+    {
+      "id": "landing-page-generator",
+      "title": "landing-page-generator",
+      "summary": "Generates high-converting landing pages as complete Next.js/React (TSX) componen…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Generates high-converting landing pages as complete Next.js/React (TSX) components with Tailwind CSS. Creates hero sections, feature grids, pricing tables, FAQ accordions, testimonial blocks, and CTA sections using proven copy frameworks (PAS, AIDA, BAB). Outputs SEO meta tags, structured data, and performance-optimised code targeting Core Web Vitals (LCP < 1s, CLS < 0.1). Use when the user asks to create a landing page, marketing page, homepage, single-page site, lead capture page, campaign page, promo page, or conversion-optimised web page — or when they want to A/B test landing page variants or replace a static page with one designed to convert.",
+        "keywords": [
+          "generates",
+          "high-converting",
+          "landing",
+          "pages",
+          "complete",
+          "next",
+          "react",
+          "tsx",
+          "components",
+          "tailwind",
+          "css",
+          "creates"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "16b2ed1931dd1e4902e908c3625d98ab2c039e4c6f2b12ee5283f76ed01da1ee",
+      "path": "skills/extension/landing-page-generator"
+    },
+    {
+      "id": "latex-posters",
+      "title": "latex-posters",
+      "summary": "Create professional research posters in LaTeX using beamerposter, tikzposter, or…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Create professional research posters in LaTeX using beamerposter, tikzposter, or baposter. Support for conference presentations, academic posters, and scientific communication. Includes layout design, color schemes, multi-column formats, figure integration, and poster-specific best practices for visual communication.",
+        "keywords": [
+          "create",
+          "professional",
+          "research",
+          "posters",
+          "latex",
+          "beamerposter",
+          "tikzposter",
+          "baposter",
+          "support",
+          "conference",
+          "presentations",
+          "academic"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f41ba0f9b6c515f595bf833bd18916712584cdf53d98905ed83c3e243dc1030f",
+      "path": "skills/extension/latex-posters"
+    },
+    {
+      "id": "literature-review",
+      "title": "literature-review",
+      "summary": "Conduct comprehensive, systematic literature reviews using multiple academic dat…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be used when conducting systematic literature reviews, meta-analyses, research synthesis, or comprehensive literature searches across biomedical, scientific, and technical domains. Creates professionally formatted markdown documents and PDFs with verified citations in multiple citation styles (APA, Nature, Vancouver, etc.).",
+        "keywords": [
+          "conduct",
+          "comprehensive",
+          "systematic",
+          "literature",
+          "reviews",
+          "multiple",
+          "academic",
+          "databases",
+          "pubmed",
+          "arxiv",
+          "biorxiv",
+          "semantic"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "6813bf47ad6cc25acb0f47b86d3d1d7a96853a63f3b6e76964d9c0d32e1762d6",
+      "path": "skills/extension/literature-review"
+    },
+    {
+      "id": "llm-cost-optimizer",
+      "title": "llm-cost-optimizer",
+      "summary": "Use proactively whenever LLM API costs come up -- or should. Triggers include: '…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use proactively whenever LLM API costs come up -- or should. Triggers include: 'my AI costs are too high', 'optimize token usage', 'which model should I use', 'LLM spend is out of control', 'implement prompt caching', 'we're about to launch an AI feature', 'build me an AI endpoint'. Don't wait for an explicit cost complaint -- if someone is building an AI feature, designing an LLM endpoint, or choosing between models, cost architecture belongs in the conversation. Apply immediately when any of these are true: a system prompt appears that exceeds a few hundred tokens, all requests are hitting the same model, max_tokens is not set, or no per-feature cost logging exists. NOT for RAG pipeline design (use rag-architect). NOT for improving prompt quality or effectiveness (use senior-prompt-engineer).",
+        "keywords": [
+          "proactively",
+          "whenever",
+          "llm",
+          "api",
+          "costs",
+          "come",
+          "triggers",
+          "include",
+          "too",
+          "high",
+          "optimize",
+          "token"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "31f94551b0a0a81117748f8aab2b4ee48060c43a96fec2b9c48e0eeee474c075",
+      "path": "skills/extension/llm-cost-optimizer"
+    },
+    {
+      "id": "markdown-mermaid-writing",
+      "title": "markdown-mermaid-writing",
+      "summary": "Comprehensive markdown and Mermaid diagram writing skill. Use when creating any …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Comprehensive markdown and Mermaid diagram writing skill. Use when creating any scientific document, report, analysis, or visualization. Establishes text-based diagrams as the default documentation standard with full style guides (markdown + mermaid), 24 diagram type references, and 9 document templates.",
+        "keywords": [
+          "comprehensive",
+          "markdown",
+          "mermaid",
+          "diagram",
+          "writing",
+          "creating",
+          "scientific",
+          "document",
+          "report",
+          "analysis",
+          "visualization",
+          "establishes"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "77210181c36ed3444d644d0c6b5ac373ea564ffd2d996f04ffd6741454108d82",
+      "path": "skills/extension/markdown-mermaid-writing"
+    },
+    {
+      "id": "market-research",
+      "title": "market-research",
+      "summary": "Conduct market research, competitive analysis, investor due diligence, and indus…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribution and decision-oriented summaries. Use when the user wants market sizing, competitor comparisons, fund research, technology scans, or research that informs business decisions.",
+        "keywords": [
+          "conduct",
+          "market",
+          "research",
+          "competitive",
+          "analysis",
+          "investor",
+          "due",
+          "diligence",
+          "industry",
+          "intelligence",
+          "source",
+          "attribution"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "c48ae5eaa4e44db68d74775c0d69265e01e8f382832742361f82bd6461c0419b",
+      "path": "skills/extension/market-research"
     },
     {
       "id": "marketing-skills",
@@ -307,6 +3582,484 @@
       "path": "skills/extension/marketing-skills"
     },
     {
+      "id": "markitdown",
+      "title": "markitdown",
+      "summary": "Convert heterogeneous documents and selected URIs to Markdown with Microsoft Mar…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Convert heterogeneous documents and selected URIs to Markdown with Microsoft MarkItDown for text analysis, search, and LLM/RAG ingestion. Covers safe local conversion, streams, Office/PDF/data formats, batch workflows, plugins, vision OCR, Azure extraction, and the official MCP server.",
+        "keywords": [
+          "convert",
+          "heterogeneous",
+          "documents",
+          "selected",
+          "uris",
+          "markdown",
+          "microsoft",
+          "markitdown",
+          "text",
+          "analysis",
+          "search",
+          "llm"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "9d074762d483ff8bcbf82dbd3d98a0a9047d370e4eb4856bc5100102fb98f204",
+      "path": "skills/extension/markitdown"
+    },
+    {
+      "id": "matplotlib",
+      "title": "matplotlib",
+      "summary": "Low-level plotting library for full customization. Use when you need fine-graine…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Low-level plotting library for full customization. Use when you need fine-grained control over every plot element, creating novel plot types, or integrating with specific scientific workflows. Export to PNG/PDF/SVG for publication. For quick statistical plots use seaborn; for interactive plots use plotly; for publication-ready multi-panel figures with journal styling, use scientific-visualization.",
+        "keywords": [
+          "low-level",
+          "plotting",
+          "library",
+          "full",
+          "customization",
+          "fine-grained",
+          "control",
+          "over",
+          "every",
+          "plot",
+          "element",
+          "creating"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "2e46d6b6f73369443513639ba202231e3a4124b4f14196ed20c81434321769db",
+      "path": "skills/extension/matplotlib"
+    },
+    {
+      "id": "mcp-server-builder",
+      "title": "mcp-server-builder",
+      "summary": "Design and ship production-ready MCP (Model Context Protocol) servers from OpenA…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files",
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Design and ship production-ready MCP (Model Context Protocol) servers from OpenAPI contracts instead of hand-written tool wrappers. Python and TypeScript support, schema validation, safe evolution. Use when exposing an existing API as an MCP server, building tool integrations for Claude or Codex or Cursor, or scaffolding an MCP project from scratch.",
+        "keywords": [
+          "design",
+          "ship",
+          "production-ready",
+          "mcp",
+          "model",
+          "context",
+          "protocol",
+          "servers",
+          "openapi",
+          "contracts",
+          "instead",
+          "hand-written"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "afefafd4d6d37e46fe0e6f4a3e2442424c4bff4e907416495b40544a70bfb49f",
+      "path": "skills/extension/mcp-server-builder"
+    },
+    {
+      "id": "mcp-server-patterns",
+      "title": "mcp-server-patterns",
+      "summary": "Build MCP servers with Node/TypeScript SDK — tools, resources, prompts, Zod vali…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Build MCP servers with Node/TypeScript SDK — tools, resources, prompts, Zod validation, stdio vs Streamable HTTP. Use Context7 or official MCP docs for latest API.",
+        "keywords": [
+          "build",
+          "mcp",
+          "servers",
+          "node",
+          "typescript",
+          "sdk",
+          "resources",
+          "prompts",
+          "zod",
+          "validation",
+          "stdio",
+          "streamable"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "aa037f7c37ce282d04dc950a25486b3dfbd10a404f51af88abad82a8bca29c43",
+      "path": "skills/extension/mcp-server-patterns"
+    },
+    {
+      "id": "md-slides",
+      "title": "md-slides",
+      "summary": "Converts a markdown deck (slides separated by `---` HR boundaries or by `# ` H1 …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Converts a markdown deck (slides separated by `---` HR boundaries or by `# ` H1 headings, with optional `<!-- notes: ... -->` presenter notes blocks) into a single-file HTML presentation with arrow-key / space / PgDn / PgUp / Home / End / P / Esc keyboard navigation, presenter mode (split view with current slide + speaker notes + clock + next-slide preview), URL-hash deep linking, and `@media print` page-per-slide for PDF export. Triggers when the markdown-html-orchestrator classifies an input as SLIDES, or when invoked directly via /cs:md-slides. Reuses md-document's markdown parser for slide-body rendering and reads design-system tokens via config_loader.py. Refuses if input has no clear slide boundaries, produces a 1-slide deck, or `--strict-notes` is on with < 50% notes coverage. Use after orchestrator routing.",
+        "keywords": [
+          "converts",
+          "markdown",
+          "deck",
+          "slides",
+          "separated",
+          "boundaries",
+          "headings",
+          "optional",
+          "notes",
+          "presenter",
+          "blocks",
+          "single-file"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4e279fd67cdba2e6aceebcdd971ba31ce2e56dedf6a37e284abfa0b76e4ad032",
+      "path": "skills/extension/md-slides"
+    },
+    {
+      "id": "media-edit",
+      "title": "muapi-media-editing",
+      "summary": "Edit and enhance images and videos with AI via muapi.ai — prompt-based editing, …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Edit and enhance images and videos with AI via muapi.ai — prompt-based editing, upscaling, background removal, face swap, lipsync, video effects, and more",
+        "keywords": [
+          "edit",
+          "enhance",
+          "images",
+          "videos",
+          "muapi",
+          "prompt-based",
+          "editing",
+          "upscaling",
+          "background",
+          "removal",
+          "face",
+          "swap"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "176c9dc3be01bd51ec745bded97080e7b4add3560019a1ef0db8c29473a673f4",
+      "path": "skills/extension/media-edit"
+    },
+    {
+      "id": "media-platform",
+      "title": "muapi-platform",
+      "summary": "Setup and utility scripts for muapi.ai — configure API keys, test connectivity, …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Setup and utility scripts for muapi.ai — configure API keys, test connectivity, and poll for async generation results",
+        "keywords": [
+          "setup",
+          "utility",
+          "scripts",
+          "muapi",
+          "configure",
+          "api",
+          "keys",
+          "test",
+          "connectivity",
+          "poll",
+          "async",
+          "generation"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "0ce2f8d7a10d5d52cd800cabd0206bcf947fe552f18c84dd61414ebdfb22a7b5",
+      "path": "skills/extension/media-platform"
+    },
+    {
+      "id": "media-studio",
+      "title": "muapi-media-generation",
+      "summary": "Generate AI images, videos, music, and audio from the terminal via muapi.ai — su…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Generate AI images, videos, music, and audio from the terminal via muapi.ai — supports 100+ models including Flux, Midjourney v7, Kling 3.0, Veo3, and Suno V5",
+        "keywords": [
+          "generate",
+          "images",
+          "videos",
+          "music",
+          "audio",
+          "terminal",
+          "muapi",
+          "supports",
+          "models",
+          "including",
+          "flux",
+          "midjourney"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "edc1f8468e4893597c7b036f863058b93cf7341f9aa7397f24ecda2171756dfc",
+      "path": "skills/extension/media-studio"
+    },
+    {
+      "id": "media-workflow",
+      "title": "muapi-workflow",
+      "summary": "Build, run, and visualize multi-step AI generation workflows. The AI architect t…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Build, run, and visualize multi-step AI generation workflows. The AI architect translates natural language descriptions into connected node graphs — chain image generation, video creation, enhancement, and editing into automated pipelines.",
+        "keywords": [
+          "build",
+          "run",
+          "visualize",
+          "multi-step",
+          "generation",
+          "workflows",
+          "architect",
+          "translates",
+          "natural",
+          "language",
+          "descriptions",
+          "connected"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "1d7b2b5ce7c2034c393276ba925b32b7a293824f58867c2b6d9ec12293b90de3",
+      "path": "skills/extension/media-workflow"
+    },
+    {
+      "id": "meetings",
+      "title": "meetings",
+      "summary": "Use when someone wants to decide whether a meeting is worth calling, price a mee…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when someone wants to decide whether a meeting is worth calling, price a meeting in dollars, build a timeboxed agenda with desired outcomes, or turn messy meeting notes into owned action items — or says \"should this be a meeting\", \"/cs:meeting-prep\", or \"/cs:meeting-actions\". Runs a cost gate (ASYNC / NOT-READY / MEET), builds a decision-first agenda, and extracts an owner + due-date checklist that flags every orphan.",
+        "keywords": [
+          "someone",
+          "wants",
+          "decide",
+          "whether",
+          "meeting",
+          "worth",
+          "calling",
+          "price",
+          "dollars",
+          "build",
+          "timeboxed",
+          "agenda"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "c35e384062cf10137c808b329018e3258b5a0b971d09d7bd36e2c0d4c4efe423",
+      "path": "skills/extension/meetings"
+    },
+    {
+      "id": "migration-architect",
+      "title": "migration-architect",
+      "summary": "Zero-downtime migration planning, compatibility validation, and rollback strateg…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Zero-downtime migration planning, compatibility validation, and rollback strategy generation. Tools for system, database, and infrastructure migrations with minimal business impact. Use when planning a database migration, infrastructure cutover, system replacement, or any high-risk transition that needs explicit rollback paths.",
+        "keywords": [
+          "zero-downtime",
+          "migration",
+          "planning",
+          "compatibility",
+          "validation",
+          "rollback",
+          "strategy",
+          "generation",
+          "system",
+          "database",
+          "infrastructure",
+          "migrations"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "e88a6d3450e05d4f37c4b970d263955f825c4e0954b57bfc7425ce8657070719",
+      "path": "skills/extension/migration-architect"
+    },
+    {
       "id": "mineru",
       "title": "MinerU 文档解析",
       "summary": "PDF/Office/图片 → Markdown(表格/公式/OCR),MinerU API 驱动,零配置,支持批处理。",
@@ -348,6 +4101,1787 @@
       },
       "sha256": "1767f870b2054fd656ac47692446a46a916a7a23bec30ee974e07654ac38f34b",
       "path": "skills/extension/mineru"
+    },
+    {
+      "id": "monorepo-navigator",
+      "title": "monorepo-navigator",
+      "summary": "Navigate, manage, and optimize monorepos. Covers Turborepo, Nx, pnpm workspaces,…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Navigate, manage, and optimize monorepos. Covers Turborepo, Nx, pnpm workspaces, and Lerna. Cross-package impact analysis, selective builds/tests on affected packages, remote caching, dependency graph visualization, and structured multi-repo to monorepo migrations. Use when setting up a new monorepo, optimizing CI for a large workspace, debugging cross-package dependency issues, or planning a multi-repo consolidation.",
+        "keywords": [
+          "navigate",
+          "manage",
+          "optimize",
+          "monorepos",
+          "covers",
+          "turborepo",
+          "pnpm",
+          "workspaces",
+          "lerna",
+          "cross-package",
+          "impact",
+          "analysis"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "2db9ba94e345b8c86981314744d6cbee506019b09fc8fce4b9da2fd726bafd70",
+      "path": "skills/extension/monorepo-navigator"
+    },
+    {
+      "id": "networkx",
+      "title": "networkx",
+      "summary": "Create, analyze, and visualize complex networks and graphs in Python with Networ…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Create, analyze, and visualize complex networks and graphs in Python with NetworkX. Use when working with network/graph data structures, computing graph algorithms (shortest paths, centrality, clustering), detecting communities, generating synthetic networks (random, scale-free, small-world), reading/writing graph file formats, or drawing network topologies. Common applications include social, biological, transportation, and citation networks.",
+        "keywords": [
+          "create",
+          "analyze",
+          "visualize",
+          "complex",
+          "networks",
+          "graphs",
+          "python",
+          "networkx",
+          "working",
+          "network",
+          "graph",
+          "data"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "c4bd4b4f9f5b5de23c96d6b5b7090f68f1a1e946446142f0e8280dbbcc7272fd",
+      "path": "skills/extension/networkx"
+    },
+    {
+      "id": "nextjs-turbopack",
+      "title": "nextjs-turbopack",
+      "summary": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and whe…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
+        "keywords": [
+          "next",
+          "turbopack",
+          "incremental",
+          "bundling",
+          "caching",
+          "dev",
+          "speed",
+          "webpack",
+          "nextjs-turbopack"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4bf540eaff8af37b29d5c7b4851031f501368d70d44234fadadf9ab17b9a94b3",
+      "path": "skills/extension/nextjs-turbopack"
+    },
+    {
+      "id": "notebooklm",
+      "title": "notebooklm",
+      "summary": "Browser automation skill for controlling Google's NotebookLM. Use when the user …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Browser automation skill for controlling Google's NotebookLM. Use when the user wants anything done in NotebookLM (e.g., 'open NotebookLM', 'check my [name] notebook', 'ask my notebook about X', 'add [source] to NotebookLM', 'generate a Video Overview from my notebook', 'use NotebookLM Studio'). Handles reading and querying notebooks, adding sources (URLs, text, files, YouTube links, synthesized content), generating Studio outputs (Audio/Video Overviews, Mind Maps, Reports incl. Briefing Doc/Study Guide/FAQ, Flashcards, Quiz, slide decks, infographics — discover the exact set from the live Studio panel; the UI evolves fast), and creating new notebooks. Requires browser automation environment — fails gracefully when unavailable.",
+        "keywords": [
+          "browser",
+          "automation",
+          "controlling",
+          "google",
+          "notebooklm",
+          "wants",
+          "anything",
+          "done",
+          "open",
+          "check",
+          "name",
+          "notebook"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "bd61f0c30e4f9b509ca2f3c8f9c02b1e64d3fc3b6859fff60644abb35e486760",
+      "path": "skills/extension/notebooklm"
+    },
+    {
+      "id": "observability-designer",
+      "title": "observability-designer",
+      "summary": "Design production-ready observability strategies combining metrics, logs, and tr…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Design production-ready observability strategies combining metrics, logs, and traces. Includes SLI/SLO design, golden-signals monitoring, alert optimization. Use when adding observability to a new service, refactoring alerting that is too noisy, or designing an SLO program before scaling production load.",
+        "keywords": [
+          "design",
+          "production-ready",
+          "observability",
+          "strategies",
+          "combining",
+          "metrics",
+          "logs",
+          "traces",
+          "includes",
+          "sli",
+          "slo",
+          "golden-signals"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "703a85b39bd34a6198c58c390dfcb9cd52981931268f3c312cf3b55250c8df6d",
+      "path": "skills/extension/observability-designer"
+    },
+    {
+      "id": "open-notebook",
+      "title": "open-notebook",
+      "summary": "Self-hosted, open-source alternative to Google NotebookLM for AI-powered researc…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Self-hosted, open-source alternative to Google NotebookLM for AI-powered research and document analysis. Use when organizing research materials into notebooks, ingesting diverse content sources (PDFs, videos, audio, web pages, Office documents), generating AI-powered notes and summaries, creating multi-speaker podcasts from research, chatting with documents using context-aware AI, searching across materials with full-text and vector search, or running custom content transformations. Supports 16+ AI providers including OpenAI, Anthropic, Google, Ollama, Groq, and Mistral with complete data privacy through self-hosting.",
+        "keywords": [
+          "self-hosted",
+          "open-source",
+          "alternative",
+          "google",
+          "notebooklm",
+          "ai-powered",
+          "research",
+          "document",
+          "analysis",
+          "organizing",
+          "materials",
+          "notebooks"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "0f0376a9b1788a51a562fc70a59cd9ca00033dd20a211a84b559daceaae9abf5",
+      "path": "skills/extension/open-notebook"
+    },
+    {
+      "id": "paper-lookup",
+      "title": "paper-lookup",
+      "summary": "Search 11 academic literature APIs for papers, preprints, citations, and open-ac…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "Search 11 academic literature APIs for papers, preprints, citations, and open-access full text, and return results with reproducible provenance. Covers PubMed, PMC (full text), Europe PMC (full-text and preprint search), bioRxiv, medRxiv, arXiv, OpenAlex, Crossref, Semantic Scholar, CORE, Unpaywall. Use when searching for papers, citations, DOI/PMID/arXiv lookups, abstracts, full text, open-access PDFs, preprints, citation graphs, author publications, or any scholarly literature query. Triggers on mentions of any supported database or requests like \"find papers on X\", \"look up this DOI\", \"who cites this paper\", or \"get me the PDF\".",
+        "keywords": [
+          "search",
+          "academic",
+          "literature",
+          "apis",
+          "papers",
+          "preprints",
+          "citations",
+          "open-access",
+          "full",
+          "text",
+          "return",
+          "results"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "0a5dbdfd64e1c96f776ceab58eedebfbee9f1c2bf59aff88d06b3d635a550ef1",
+      "path": "skills/extension/paper-lookup"
+    },
+    {
+      "id": "paperclip",
+      "title": "paperclip",
+      "summary": "Search and read full-text biomedical papers, FDA/PMDA/EMA regulatory documents, …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Search and read full-text biomedical papers, FDA/PMDA/EMA regulatory documents, clinical trial registries, and UniProt/PDB/ChEMBL entries with the Paperclip CLI from GXL. Covers installing and authenticating the `paperclip` binary with a PAPERCLIP_API_KEY, the read-only virtual filesystem under /papers, /fda, /trials, /proteins and /clipboard, source-scoped semantic search, corpus-wide grep, metadata lookup and SQL, map/reduce reading across many papers, figure vision analysis, opt-in paper repositories with claim verification, and line-pinned citations. Use when asked to install paperclip, run paperclip search/grep/map/reduce/sql/repo, find or read biomedical literature, regulatory filings or clinical trials through paperclip, or produce citations with line numbers.",
+        "keywords": [
+          "search",
+          "read",
+          "full-text",
+          "biomedical",
+          "papers",
+          "fda",
+          "pmda",
+          "ema",
+          "regulatory",
+          "documents",
+          "clinical",
+          "trial"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "e77c6f3ecf59ce567c18bdfd08513d047578f3276057bea9077139b78f5505b5",
+      "path": "skills/extension/paperclip"
+    },
+    {
+      "id": "paperzilla",
+      "title": "paperzilla",
+      "summary": "Chat with your agent about projects, recommendations, and canonical papers in Pa…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "Chat with your agent about projects, recommendations, and canonical papers in Paperzilla. Use when users ask for recent project recommendations, canonical paper details, markdown-based summaries, recommendation feedback, feed export, or Atom feed URLs.",
+        "keywords": [
+          "chat",
+          "about",
+          "projects",
+          "recommendations",
+          "canonical",
+          "papers",
+          "paperzilla",
+          "ask",
+          "recent",
+          "project",
+          "paper",
+          "details"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "5c9d7c2e007d0e4c2079247cfc0614eefb82f9b65be43ece934c2e229dbbe865",
+      "path": "skills/extension/paperzilla"
+    },
+    {
+      "id": "patent",
+      "title": "patent",
+      "summary": "Patent prior-art and landscape intelligence skill — not generic patent help. Com…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Patent prior-art and landscape intelligence skill — not generic patent help. Commits to one of five sub-use-cases via forcing intake (novelty search / freedom-to-operate / competitive landscape / acquisition diligence / litigation prior-art) before any search runs. Searches Google Patents, Espacenet, USPTO, and optionally Lens.org for citation-graph signals. Output is an editable Word document (.docx) with verdict, ranked closest art (claim-text extracted), CPC-class-aware landscape, family-resolved hits, geographic coverage, FTO flags where applicable, strategy recommendations, and full audit log. Use when the user asks for patent searching or analysis (e.g., 'prior art search for [invention]', 'freedom to operate analysis for [product]'). Produces search signal, not legal advice — always recommends consulting a patent attorney before filing or licensing decisions. Trademark, copyright, and trade-secret questions are out of scope.",
+        "keywords": [
+          "patent",
+          "prior-art",
+          "landscape",
+          "intelligence",
+          "generic",
+          "help",
+          "commits",
+          "one",
+          "five",
+          "sub-use-cases",
+          "forcing",
+          "intake"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "7ce55712cd5abb8a1c9c164409574340ef7af4ee620214511d5de8b535aa1acb",
+      "path": "skills/extension/patent"
+    },
+    {
+      "id": "pdf",
+      "title": "pdf",
+      "summary": "Use this skill whenever the user wants to do anything with PDF files. This inclu…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+        "keywords": [
+          "whenever",
+          "wants",
+          "anything",
+          "pdf",
+          "includes",
+          "reading",
+          "extracting",
+          "text",
+          "tables",
+          "pdfs",
+          "combining",
+          "merging"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "3beb44213282c3a524613a4ab1ea54e4c2a59f53abd1e122fc83bc51af3f408e",
+      "path": "skills/extension/pdf"
+    },
+    {
+      "id": "peer-review",
+      "title": "peer-review",
+      "summary": "Prepare evidence-bounded, constructive peer-review drafts and structured manuscr…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Prepare evidence-bounded, constructive peer-review drafts and structured manuscript assessments. Use for authorized review of scientific manuscripts, protocols, preprints, or research proposals; reporting-guideline selection; claim–evidence checks; methods, statistics, reproducibility, ethics, figure/table, and citation critique; or revision-response planning.",
+        "keywords": [
+          "prepare",
+          "evidence-bounded",
+          "constructive",
+          "peer-review",
+          "drafts",
+          "structured",
+          "manuscript",
+          "assessments",
+          "authorized",
+          "review",
+          "scientific",
+          "manuscripts"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4795307cbd5649ed922cf249f0839a12c26ff7224b49475d44ad465f34200715",
+      "path": "skills/extension/peer-review"
+    },
+    {
+      "id": "performance-profiler",
+      "title": "performance-profiler",
+      "summary": "Systematic performance profiling for Node.js, Python, and Go applications. Ident…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Systematic performance profiling for Node.js, Python, and Go applications. Identifies CPU, memory, and I/O bottlenecks, generates flamegraphs, analyzes bundle sizes, optimizes database queries, runs load tests with k6 and Artillery. Always measures before and after. Use when investigating a slow endpoint, planning a performance budget, or hunting a memory leak in production.",
+        "keywords": [
+          "systematic",
+          "performance",
+          "profiling",
+          "node",
+          "python",
+          "applications",
+          "identifies",
+          "cpu",
+          "memory",
+          "bottlenecks",
+          "generates",
+          "flamegraphs"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "70a73c4e704755e95c4cf86e3e26731de2e04b6610fa78ba43c483ac798a45f4",
+      "path": "skills/extension/performance-profiler"
+    },
+    {
+      "id": "polars",
+      "title": "polars",
+      "summary": "High-performance DataFrame library for Python ETL, analytics, and pandas migrati…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "High-performance DataFrame library for Python ETL, analytics, and pandas migration. Use for expression-based data manipulation with lazy query optimization, parallel execution, streaming out-of-core processing, Arrow interoperability, and optional GPU execution.",
+        "keywords": [
+          "high-performance",
+          "dataframe",
+          "library",
+          "python",
+          "etl",
+          "analytics",
+          "pandas",
+          "migration",
+          "expression-based",
+          "data",
+          "manipulation",
+          "lazy"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "bb918cd17d5ea63623450f2dc5484d0f5d692807a981b80b36fb3719ff481f8a",
+      "path": "skills/extension/polars"
+    },
+    {
+      "id": "pptx",
+      "title": "pptx",
+      "summary": "Use this skill any time a .pptx or .potx file is involved in any way — as input,…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx or .potx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates (.potx), layouts, speaker notes, or comments. Trigger whenever the user mentions \\\"deck,\\\" \\\"slides,\\\" \\\"presentation,\\\" or references a .pptx or .potx filename, regardless of what they plan to do with the content afterward. If a .pptx or .potx file needs to be opened, created, or touched, use this skill.",
+        "keywords": [
+          "time",
+          "pptx",
+          "potx",
+          "involved",
+          "way",
+          "input",
+          "output",
+          "both",
+          "includes",
+          "creating",
+          "slide",
+          "decks"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "148fc51e5b26448abd9c44b774b01d92cdbdb5964e86b3bc7be4a03ff2ec5815",
+      "path": "skills/extension/pptx"
+    },
+    {
+      "id": "pptx-posters",
+      "title": "pptx-posters",
+      "summary": "Create and audit editable scientific posters in macro-free PowerPoint (.pptx) fr…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Create and audit editable scientific posters in macro-free PowerPoint (.pptx) from author-approved local content and assets. Use when the requested deliverable is a PowerPoint research/conference poster and exact physical, printer, accessibility, provenance, and package-security checks are required.",
+        "keywords": [
+          "create",
+          "audit",
+          "editable",
+          "scientific",
+          "posters",
+          "macro-free",
+          "powerpoint",
+          "pptx",
+          "author-approved",
+          "local",
+          "content",
+          "assets"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "6d027b8e932449ec2652fd7b4fe524c9030a3a51049cd8eaaf3ae3443d916dcb",
+      "path": "skills/extension/pptx-posters"
+    },
+    {
+      "id": "pr-review-expert",
+      "title": "pr-review-expert",
+      "summary": "Use when the user asks to review pull requests, analyze code changes, check for …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to review pull requests, analyze code changes, check for security issues in PRs, or assess code quality of diffs.",
+        "keywords": [
+          "asks",
+          "review",
+          "pull",
+          "requests",
+          "analyze",
+          "code",
+          "changes",
+          "check",
+          "security",
+          "issues",
+          "prs",
+          "assess"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f5ac453580817fefbf9f97e3fcc1315c8c23eb80a18af07ceaf7a3e6cb1e3571",
+      "path": "skills/extension/pr-review-expert"
+    },
+    {
+      "id": "product-capability",
+      "title": "product-capability",
+      "summary": "Translate PRD intent, roadmap asks, or product discussions into an implementatio…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes constraints, invariants, interfaces, and unresolved decisions before multi-service work starts. Use when the user needs an ECC-native PRD-to-SRS lane instead of vague planning prose.",
+        "keywords": [
+          "translate",
+          "prd",
+          "intent",
+          "roadmap",
+          "asks",
+          "product",
+          "discussions",
+          "implementation-ready",
+          "capability",
+          "plan",
+          "exposes",
+          "constraints"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "636061c6064851f7d8ef22b6089b5a64f09e4fce7cf327d529ff6644d8f10305",
+      "path": "skills/extension/product-capability"
+    },
+    {
+      "id": "prompt-governance",
+      "title": "prompt-governance",
+      "summary": "Use when managing prompts in production at scale: versioning prompts, running A/…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when managing prompts in production at scale: versioning prompts, running A/B tests on prompts, building prompt registries, preventing prompt regressions, or creating eval pipelines for production AI features. Triggers: 'manage prompts in production', 'prompt versioning', 'prompt regression', 'prompt A/B test', 'prompt registry', 'eval pipeline'. NOT for writing or improving individual prompts (use senior-prompt-engineer). NOT for RAG pipeline design (use rag-architect). NOT for LLM cost reduction (use llm-cost-optimizer).",
+        "keywords": [
+          "managing",
+          "prompts",
+          "production",
+          "scale",
+          "versioning",
+          "running",
+          "tests",
+          "building",
+          "prompt",
+          "registries",
+          "preventing",
+          "regressions"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "008f79f8aee3707685cc504363560f3add784cc36a9b7ceef11ab20665b1c351",
+      "path": "skills/extension/prompt-governance"
+    },
+    {
+      "id": "rag-architect",
+      "title": "rag-architect",
+      "summary": "Use when the user asks to design a RAG pipeline, choose a chunking strategy or e…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to design a RAG pipeline, choose a chunking strategy or embedding model, pick a vector database, or evaluate retrieval quality (precision@k, recall@k, NDCG). Examples: 'design a RAG system for our docs', 'what chunk size should I use for this corpus', 'evaluate my retriever against ground truth'. NOT for general LLM cost tuning (use llm-cost-optimizer) or agent loops over retrieval (use agenthub).",
+        "keywords": [
+          "asks",
+          "design",
+          "rag",
+          "pipeline",
+          "choose",
+          "chunking",
+          "strategy",
+          "embedding",
+          "model",
+          "pick",
+          "vector",
+          "database"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "42a74754a0c488460b861ee2dddcaac025d8b657241b2634f49b384c530daebe",
+      "path": "skills/extension/rag-architect"
+    },
+    {
+      "id": "reflect",
+      "title": "reflect",
+      "summary": "Mid-conversation reflection skill that pauses execution and zooms out from detai…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Mid-conversation reflection skill that pauses execution and zooms out from detail-mode to honestly reassess direction, assumptions, and bias. Use when the user says 'reflect', 'take a step back', 'step back', 'zoom out', 'are we missing something', 'bigger picture', 'sanity check this', 'are we on track', 'are we overthinking this', 'forest for the trees', or any variation signaling intent to break out of detail-mode and reassess. Also trigger when the conversation has gone deep on implementation details without strategic check-in, or when the user shows signs of being stuck — that's often a signal the framing needs a reset, not more detail work. Intentionally low-intake: runs the 5-dimension analysis immediately when prior context is rich enough; asks one forcing clarifier only when invocation context is too thin to reassess from.",
+        "keywords": [
+          "mid-conversation",
+          "reflection",
+          "pauses",
+          "execution",
+          "zooms",
+          "detail-mode",
+          "honestly",
+          "reassess",
+          "direction",
+          "assumptions",
+          "bias",
+          "says"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "c0179082244609e4d6dae814c978b237a92ea65a2ac5a9541fb07a5f6236e2ed",
+      "path": "skills/extension/reflect"
+    },
+    {
+      "id": "runbook-generator",
+      "title": "runbook-generator",
+      "summary": "Generate operational runbooks from a service name — deployment, incident respons…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Generate operational runbooks from a service name — deployment, incident response, maintenance, and rollback workflows. Templated structure customizable per environment. Use when documenting on-call procedures for a new service, standardizing incident response across teams, or producing runbooks before launching to production.",
+        "keywords": [
+          "generate",
+          "operational",
+          "runbooks",
+          "service",
+          "name",
+          "deployment",
+          "incident",
+          "response",
+          "maintenance",
+          "rollback",
+          "workflows",
+          "templated"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "04d279edc22674b7c907e4da7c7600b1c5af072d4ad53eb9e909b1a2193ecf60",
+      "path": "skills/extension/runbook-generator"
+    },
+    {
+      "id": "saas-scaffolder",
+      "title": "saas-scaffolder",
+      "summary": "Generates complete, production-ready SaaS project boilerplate including authenti…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Generates complete, production-ready SaaS project boilerplate including authentication, database schemas, billing integration, API routes, and a working dashboard using Next.js 14+ App Router, TypeScript, Tailwind CSS, shadcn/ui, Drizzle ORM, and Stripe. Use when the user wants to create a new SaaS app, start a subscription-based web project, scaffold a Next.js application, or mentions terms like starter template, boilerplate, new project, or wiring up auth and payments.",
+        "keywords": [
+          "generates",
+          "complete",
+          "production-ready",
+          "saas",
+          "project",
+          "boilerplate",
+          "including",
+          "authentication",
+          "database",
+          "schemas",
+          "billing",
+          "integration"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "cd69dd8f06d4ac26b2bf4c4ee98b65aaaa9cb0c177ff8d4a14997990b2f3e21a",
+      "path": "skills/extension/saas-scaffolder"
+    },
+    {
+      "id": "scientific-writing",
+      "title": "scientific-writing",
+      "summary": "Draft, revise, and audit scientific manuscripts or reports with explicit evidenc…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Draft, revise, and audit scientific manuscripts or reports with explicit evidence provenance, reporting-guideline coverage, authorship accountability, confidentiality controls, and local consistency checks. Use for manuscript sections, references, declarations, tables, figures, or submission preparation when scientific accuracy and traceability matter.",
+        "keywords": [
+          "draft",
+          "revise",
+          "audit",
+          "scientific",
+          "manuscripts",
+          "reports",
+          "explicit",
+          "evidence",
+          "provenance",
+          "reporting-guideline",
+          "coverage",
+          "authorship"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "cb8fb2cc08dcea94c2ecdec8eb4c6fa29740692a6900025e5b3055f320d295e6",
+      "path": "skills/extension/scientific-writing"
+    },
+    {
+      "id": "seaborn",
+      "title": "seaborn",
+      "summary": "Statistical visualization with pandas integration. Use for quick exploration of …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Statistical visualization with pandas integration. Use for quick exploration of distributions, relationships, and categorical comparisons with attractive defaults. Best for box plots, violin plots, pair plots, heatmaps. Built on matplotlib. For interactive plots use plotly; for publication styling use scientific-visualization.",
+        "keywords": [
+          "statistical",
+          "visualization",
+          "pandas",
+          "integration",
+          "quick",
+          "exploration",
+          "distributions",
+          "relationships",
+          "categorical",
+          "comparisons",
+          "attractive",
+          "defaults"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f3c601e094624e6132eb221aa361be6910e4c64e36fee7829d22dcd5dffeabd2",
+      "path": "skills/extension/seaborn"
+    },
+    {
+      "id": "secrets-vault-manager",
+      "title": "secrets-vault-manager",
+      "summary": "Use when the user asks to set up secret management infrastructure, integrate Has…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to set up secret management infrastructure, integrate HashiCorp Vault, configure cloud secret stores (AWS Secrets Manager, Azure Key Vault, GCP Secret Manager), implement secret rotation, or audit secret access patterns.",
+        "keywords": [
+          "asks",
+          "set",
+          "secret",
+          "management",
+          "infrastructure",
+          "integrate",
+          "hashicorp",
+          "vault",
+          "configure",
+          "cloud",
+          "stores",
+          "aws"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f97ffedee49f162ce04226501951ed4a3794bb8829e5b73d401f91147efe99dd",
+      "path": "skills/extension/secrets-vault-manager"
+    },
+    {
+      "id": "self-eval",
+      "title": "self-eval",
+      "summary": "Honestly evaluate AI work quality using a two-axis scoring system. Use after com…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Honestly evaluate AI work quality using a two-axis scoring system. Use after completing a task, code review, or work session to get an unbiased assessment. Detects score inflation, forces devil's advocate reasoning, and persists scores across sessions.",
+        "keywords": [
+          "honestly",
+          "evaluate",
+          "work",
+          "quality",
+          "two-axis",
+          "scoring",
+          "system",
+          "after",
+          "completing",
+          "task",
+          "code",
+          "review"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "598582e89beaf5038da6da4ab10fb0566ca57edca64f66de4666a2ff4cda8237",
+      "path": "skills/extension/self-eval"
+    },
+    {
+      "id": "ship-gate",
+      "title": "ship-gate",
+      "summary": ">",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": ">",
+        "keywords": [
+          "ship-gate"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4ba9f3dc5ea5dbab5419167b0d571811e2cef3dd1b251551dc3949fe9f75bd54",
+      "path": "skills/extension/ship-gate"
+    },
+    {
+      "id": "skill-security-auditor",
+      "title": "skill-security-auditor",
+      "summary": ">",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": ">",
+        "keywords": [
+          "skill-security-auditor"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f55e71de386ee439f2f94392d2ff6c3466bc7173e7bb5648a450b952935386b7",
+      "path": "skills/extension/skill-security-auditor"
+    },
+    {
+      "id": "skill-tester",
+      "title": "skill-tester",
+      "summary": "Validate, test, and score the quality of skills within the claude-skills ecosyst…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Validate, test, and score the quality of skills within the claude-skills ecosystem. Comprehensive meta-skill: structure validation, Python script testing (syntax + imports + runtime + output format), multi-dimensional quality scoring with letter grades and tier classification (BASIC/STANDARD/POWERFUL). Use when authoring a new skill, auditing existing skills for tier promotion, setting up pre-commit hooks for skill quality, or integrating skill QA into CI.",
+        "keywords": [
+          "validate",
+          "test",
+          "score",
+          "quality",
+          "within",
+          "claude-skills",
+          "ecosystem",
+          "comprehensive",
+          "meta-skill",
+          "structure",
+          "validation",
+          "python"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f311fbe63ba86fc25c2d1e771512d70d0c44eb6487a01942b993cb0ee479f77e",
+      "path": "skills/extension/skill-tester"
+    },
+    {
+      "id": "slo-architect",
+      "title": "slo-architect",
+      "summary": "Use when defining, reviewing, or operating SLOs/SLIs/error budgets. Triggers on …",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when defining, reviewing, or operating SLOs/SLIs/error budgets. Triggers on \"define an SLO\", \"what should our SLO be\", \"error budget\", \"burn rate\", \"SLI\", \"service level objective\", \"Google SRE workbook\", \"multi-window burn-rate alert\", or any reliability-target question. Ships SLO designer, error-budget calculator with multi-window burn-rate thresholds, and SLO reviewer that catches the common bugs (target too aggressive, window too short, conflicting SLOs, no SLI definition). 4 references on SLO principles + SLI design + error budget math + composition with feature-flags-architect/chaos-engineering/kubernetes-operator. NOT a generic observability skill — specifically the SLO discipline.",
+        "keywords": [
+          "defining",
+          "reviewing",
+          "operating",
+          "slos",
+          "slis",
+          "error",
+          "budgets",
+          "triggers",
+          "define",
+          "slo",
+          "what",
+          "our"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f0bde0ab4ff4146bc616632f4a5e8edf4e17dfabd60bf3ab5cd313d837d723b8",
+      "path": "skills/extension/slo-architect"
+    },
+    {
+      "id": "spec-driven-workflow",
+      "title": "spec-driven-workflow",
+      "summary": "Use when the user asks to write specs before code, define acceptance criteria, p…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to write specs before code, define acceptance criteria, plan features before implementation, generate tests from specifications, or follow spec-first development practices.",
+        "keywords": [
+          "asks",
+          "write",
+          "specs",
+          "before",
+          "code",
+          "define",
+          "acceptance",
+          "criteria",
+          "plan",
+          "features",
+          "implementation",
+          "generate"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "80c6320b49dec8c520fb9490f793f46a4dc09aff910fbf24fe959812095e193e",
+      "path": "skills/extension/spec-driven-workflow"
+    },
+    {
+      "id": "statistical-analysis",
+      "title": "statistical-analysis",
+      "summary": "Guided statistical analysis for research data - test selection, assumption check…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "Guided statistical analysis for research data - test selection, assumption checking, effect sizes, power analysis, Bayesian alternatives, and APA-formatted reporting. Use whenever a user wants to compare groups, test a hypothesis, analyze experimental or survey data, check statistical assumptions, compute required sample sizes, or write up results - even if they never name a specific test. Covers t-tests, ANOVA, chi-square, correlation, regression, non-parametric and Bayesian methods. For low-level model APIs, see the statsmodels and pymc skills.",
+        "keywords": [
+          "guided",
+          "statistical",
+          "analysis",
+          "research",
+          "data",
+          "test",
+          "selection",
+          "assumption",
+          "checking",
+          "effect",
+          "sizes",
+          "power"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "e514d077ae6889071ff23be3a4d4a050c31ce7fc2104bf5e215302d1884a5c88",
+      "path": "skills/extension/statistical-analysis"
+    },
+    {
+      "id": "strategic-compact",
+      "title": "strategic-compact",
+      "summary": "Suggests manual context compaction at logical intervals to preserve context thro…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.",
+        "keywords": [
+          "suggests",
+          "manual",
+          "context",
+          "compaction",
+          "logical",
+          "intervals",
+          "preserve",
+          "through",
+          "task",
+          "phases",
+          "rather",
+          "than"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f7b16bfff305d99382c109b6631fff2f47bfbc7895fc458d8ade9525df3210a6",
+      "path": "skills/extension/strategic-compact"
+    },
+    {
+      "id": "syllabus",
+      "title": "syllabus",
+      "summary": "Generates a curated supplementary reading list from any course syllabus using Co…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Generates a curated supplementary reading list from any course syllabus using Consensus academic search. Grill-me intake (syllabus input format + course audience + year range) plus a grouping forcing-options checkpoint before any search runs — so the reading list matches the course's level and recency need. Parses the syllabus to extract topics and learning outcomes, searches Consensus for recent peer-reviewed papers per topic, and produces a professionally formatted .docx with clickable Consensus links, plain-language summaries calibrated to audience level, and Bloom-higher-order discussion questions tied to course learning goals. Use when the user uploads a syllabus, course outline, or curriculum document and wants supplementary readings (e.g., 'create a reading list from this syllabus', 'find recent papers for my course') — even casual mentions with a syllabus attached should trigger this skill.",
+        "keywords": [
+          "generates",
+          "curated",
+          "supplementary",
+          "reading",
+          "list",
+          "course",
+          "syllabus",
+          "consensus",
+          "academic",
+          "search",
+          "grill-me",
+          "intake"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "7cba0fb744840b291f477f006ad6760898ae121d9c959c2b90c9aaa68e2f31bc",
+      "path": "skills/extension/syllabus"
+    },
+    {
+      "id": "tc-tracker",
+      "title": "tc-tracker",
+      "summary": "Use when the user asks to track technical changes, create change records, manage…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when the user asks to track technical changes, create change records, manage TC lifecycles, or hand off work between AI sessions. Covers init/create/update/status/resume/close/export workflows for structured code change documentation.",
+        "keywords": [
+          "asks",
+          "track",
+          "technical",
+          "changes",
+          "create",
+          "change",
+          "records",
+          "manage",
+          "lifecycles",
+          "hand",
+          "work",
+          "between"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "d7e02126aac46d749f62518dc4b7b4023d3dcfee262d7dff00e40ba523418876",
+      "path": "skills/extension/tc-tracker"
+    },
+    {
+      "id": "tech-debt-tracker",
+      "title": "tech-debt-tracker",
+      "summary": "Scan codebases for technical debt, score severity, track trends, and generate pr…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Scan codebases for technical debt, score severity, track trends, and generate prioritized remediation plans. Use when users mention tech debt, code quality, refactoring priority, debt scoring, cleanup sprints, or code health assessment. Also use for legacy code modernization planning and maintenance cost estimation.",
+        "keywords": [
+          "scan",
+          "codebases",
+          "technical",
+          "debt",
+          "score",
+          "severity",
+          "track",
+          "trends",
+          "generate",
+          "prioritized",
+          "remediation",
+          "plans"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "a186414d6184c7cc95f73f8cd8e01d40c5776f63eac13ff9a2284850754c879f",
+      "path": "skills/extension/tech-debt-tracker"
+    },
+    {
+      "id": "universal-scraping-architect",
+      "title": "universal-scraping-architect",
+      "summary": "Use for web scraping, crawling, document extraction, API parsing, or building va…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use for web scraping, crawling, document extraction, API parsing, or building validation-heavy data pipelines using Firecrawl or local Python scripts.",
+        "keywords": [
+          "web",
+          "scraping",
+          "crawling",
+          "document",
+          "extraction",
+          "api",
+          "parsing",
+          "building",
+          "validation-heavy",
+          "data",
+          "pipelines",
+          "firecrawl"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "86cc83701636c398956a066e0e9b36f9c8dccef1d72c9c4be5625a480b9f8a50",
+      "path": "skills/extension/universal-scraping-architect"
+    },
+    {
+      "id": "video-editing",
+      "title": "video-editing",
+      "summary": "AI-assisted video editing workflows for cutting, structuring, and augmenting rea…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage. Covers the full pipeline from raw capture through FFmpeg, Remotion, ElevenLabs, fal.ai, and final polish in Descript or CapCut. Use when the user wants to edit video, cut footage, create vlogs, or build video content.",
+        "keywords": [
+          "ai-assisted",
+          "video",
+          "editing",
+          "workflows",
+          "cutting",
+          "structuring",
+          "augmenting",
+          "real",
+          "footage",
+          "covers",
+          "full",
+          "pipeline"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "9ba8fcc922c03ea4295408c6528768e8eeb9cb3e12616f0f9ab66ebfb867015b",
+      "path": "skills/extension/video-editing"
+    },
+    {
+      "id": "weekly-review",
+      "title": "weekly-review",
+      "summary": "Use when someone wants to run a weekly review, close open loops, audit stalled p…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Use when someone wants to run a weekly review, close open loops, audit stalled projects and commitments, get their system back to trusted, restart a lapsed review habit, or says \"/cs:weekly-review\". Walks David Allen's three-phase loop — GET CLEAR, GET CURRENT, GET CREATIVE — with deterministic scripts that inventory open loops, gate the checklist with named gaps, and score commitment health 0-100.",
+        "keywords": [
+          "someone",
+          "wants",
+          "run",
+          "weekly",
+          "review",
+          "close",
+          "open",
+          "loops",
+          "audit",
+          "stalled",
+          "projects",
+          "commitments"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "d85b9ae6bb03c250c6b908eb03a44918a215616c2ca6e66ddd7e611b8138fcbb",
+      "path": "skills/extension/weekly-review"
+    },
+    {
+      "id": "x-api",
+      "title": "x-api",
+      "summary": "X/Twitter API integration for posting tweets, threads, reading timelines, search…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, and platform-native content posting. Use when the user wants to interact with X programmatically.",
+        "keywords": [
+          "twitter",
+          "api",
+          "integration",
+          "posting",
+          "tweets",
+          "threads",
+          "reading",
+          "timelines",
+          "search",
+          "analytics",
+          "covers",
+          "oauth"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "e0655ac408174fc4cf6a01f4ba94871155b4c798fc4750ac8158ca1c856025e7",
+      "path": "skills/extension/x-api"
+    },
+    {
+      "id": "zero-hallucination-coder",
+      "title": "zero-hallucination-coder",
+      "summary": "Runs a disciplined Discuss -> Map -> Decompose -> Execute -> Verify loop that gr…",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "Runs a disciplined Discuss -> Map -> Decompose -> Execute -> Verify loop that grounds code in verified structure — no invented APIs, no assumed imports, no placeholder code — with a lazy-senior-dev YAGNI ladder that deletes unnecessary code before it is written. Use when a coding task is high-stakes, complex, or spans existing code (auth, databases, migrations, multi-file features), or when the user explicitly asks to plan carefully before coding, avoid hallucinated code, or work rigorously. Not for trivial edits, typos, or throwaway one-off scripts — those do not need the full loop.",
+        "keywords": [
+          "runs",
+          "disciplined",
+          "discuss",
+          "map",
+          "decompose",
+          "execute",
+          "verify",
+          "loop",
+          "grounds",
+          "code",
+          "verified",
+          "structure"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "3a5260fe57e92d5488621f9ded4e4c657ceb011e97e98910381fb43e6285210e",
+      "path": "skills/extension/zero-hallucination-coder"
     }
   ]
 }

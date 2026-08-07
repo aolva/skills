@@ -1,0 +1,47 @@
+{
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "network",
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-api-test",
+  "title": "API 测试 · API Test",
+  "summary": "HTTP 接口契约核对与测试用例生成执行:正常/边界/鉴权/幂等全覆盖,报告可复现。",
+  "routing": {
+    "description": "适用:测接口/写接口测试/联调,需要成体系用例与结论。不适用:纯前端或无需 API 的任务。",
+    "keywords": [
+      "API",
+      "接口测试",
+      "联调",
+      "OpenAPI",
+      "测试用例",
+      "契约",
+      "curl"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-llm-gateway",
+  "title": "LLM 网关 · Aolva AI Gateway",
+  "summary": "对接 Platform ai-gateway(LiteLLM 底座)的统一模型调用:档位选型/请求契约/限流降级,禁止绕过网关直连。",
+  "routing": {
+    "description": "适用:任何'调用大模型/生成文本/让 AI 处理'类任务,需走 Aolva 平台统一 ai-gateway;任务分级选模型、限流降级。不适用:用户明确要用特定供应商直连。",
+    "keywords": [
+      "ai-gateway",
+      "LLM",
+      "模型调用",
+      "LiteLLM",
+      "网关",
+      "降级",
+      "限流",
+      "模型档位"
+    ],
+    "difficulty": "low",
+    "modelTierHint": "low",
+    "confidenceThreshold": 0.8
+  }
+}

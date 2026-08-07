@@ -1,0 +1,49 @@
+{
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "reads-files",
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-doc-qa",
+  "title": "文档理解 · Doc QA",
+  "summary": "PDF/Office/扫描件的内容抽取、问答与转换,答案必带出处,对接 Nurbell 文档智能。",
+  "routing": {
+    "description": "适用:读文档找答案/抽取信息/摘要/转格式(合同、报告、论文、表格)。不适用:无需文档输入的一般问答。",
+    "keywords": [
+      "文档",
+      "PDF",
+      "OCR",
+      "抽取",
+      "问答",
+      "摘要",
+      "转换",
+      "doc",
+      "document"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}

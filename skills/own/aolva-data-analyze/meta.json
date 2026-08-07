@@ -1,0 +1,47 @@
+{
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-data-analyze",
+  "title": "数据分析 · Data Analyze",
+  "summary": "CSV/JSON 数据的探索、清洗、统计分析与可视化,全部数字脚本化可复核。",
+  "routing": {
+    "description": "适用:分析数据文件/算统计/发现规律/做图表,需要可复核结论。不适用:无数据的纯讨论。",
+    "keywords": [
+      "数据分析",
+      "CSV",
+      "JSON",
+      "统计",
+      "探索",
+      "可视化",
+      "清洗",
+      "data"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}

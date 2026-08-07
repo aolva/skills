@@ -1,0 +1,48 @@
+{
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files",
+    "network"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-web-research",
+  "title": "网页研究 · Web Research",
+  "summary": "多源抓取、交叉验证、逐条事实标注来源,输出可追溯的结构化研究报告。",
+  "routing": {
+    "description": "适用:调研/查资料/竞品对比/行业综述/写带来源的文章,要求结论可追溯。不适用:一次性闲聊式问答(不需要证据链)。",
+    "keywords": [
+      "调研",
+      "research",
+      "查资料",
+      "综述",
+      "竞品",
+      "来源",
+      "证据",
+      "对比"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-code-review",
+  "title": "代码审查 · Code Review",
+  "summary": "按安全/正确性/性能/可维护性优先级审查变更,输出带严重度的可执行问题清单。",
+  "routing": {
+    "description": "适用:审查 PR/找 bug/评估代码质量,需要系统化清单与可落地修复建议。不适用:纯风格偏好讨论。",
+    "keywords": [
+      "code review",
+      "代码审查",
+      "PR 审查",
+      "找bug",
+      "安全",
+      "质量",
+      "review"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "frontier",
+    "confidenceThreshold": 0.7
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "runs-shell",
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell",
+      "python3"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-local-compute",
+  "title": "本地算力 · Local Compute",
+  "summary": "MacBook Pro 128G 本地推理/embedding/批处理调度:能本地跑不上云,成本可控可离线。",
+  "routing": {
+    "description": "适用:embedding/批量推理/离线任务/省云费用,本地模型够用就本地跑。不适用:需要前沿模型能力的复杂推理(走网关)。",
+    "keywords": [
+      "本地算力",
+      "ollama",
+      "mlx",
+      "embedding",
+      "离线推理",
+      "批处理",
+      "Mac",
+      "local"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "low",
+    "confidenceThreshold": 0.75
+  }
+}

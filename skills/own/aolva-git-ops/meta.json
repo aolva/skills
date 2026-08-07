@@ -1,0 +1,47 @@
+{
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-git-ops",
+  "title": "Git 工作流 · Git Ops",
+  "summary": "统一 git 操作规范:分支策略/提交信息/PR 流程/冲突与回滚,历史整洁可回溯。",
+  "routing": {
+    "description": "适用:任何涉及 git 的操作(提交/分支/PR/合并/回滚/冲突),需要规范执行。不适用:无需版本管理的单文件草稿。",
+    "keywords": [
+      "git",
+      "分支",
+      "commit",
+      "PR",
+      "merge",
+      "回滚",
+      "冲突",
+      "提交规范"
+    ],
+    "difficulty": "low",
+    "modelTierHint": "low",
+    "confidenceThreshold": 0.8
+  }
+}
