@@ -1,0 +1,52 @@
+{
+  "id": "md-document",
+  "title": "Markdown 文档编写",
+  "summary": "Converts long-form markdown (specs, RFCs, reports, plans, explainers) into a sin…",
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "core",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Converts long-form markdown (specs, RFCs, reports, plans, explainers) into a single-file, lightly-interactive HTML document with sticky TOC, scrollspy, search filter, code-copy buttons, and design-system-driven brand tokens. Triggers when the markdown-html-orchestrator classifies an input as DOCUMENT, or when invoked directly via /cs:md-document. Reads the design-system config via config_loader.py and inlines the user's 12 derived CSS custom properties; refuses to render if onboarding hasn't run. Single-file output — Google Fonts + Prism.js CDN are the only externals; no framework runtime, no build step. Use after orchestrator routing or after design-system onboarding is confirmed.",
+    "keywords": [
+      "converts",
+      "long-form",
+      "markdown",
+      "specs",
+      "rfcs",
+      "reports",
+      "plans",
+      "explainers",
+      "single-file",
+      "lightly-interactive",
+      "html",
+      "document"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/affaan-m/ECC",
+    "commit": "f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

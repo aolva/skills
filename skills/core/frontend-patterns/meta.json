@@ -1,0 +1,52 @@
+{
+  "id": "frontend-patterns",
+  "title": "frontend-patterns",
+  "summary": "Frontend development patterns for React, Next.js, state management, performance …",
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "core",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
+    "keywords": [
+      "frontend",
+      "development",
+      "patterns",
+      "react",
+      "next",
+      "state",
+      "management",
+      "performance",
+      "optimization",
+      "best",
+      "practices",
+      "frontend-patterns"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/affaan-m/ECC",
+    "commit": "f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

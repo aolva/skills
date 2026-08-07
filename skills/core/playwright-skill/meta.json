@@ -1,0 +1,52 @@
+{
+  "id": "playwright-skill",
+  "title": "Playwright 浏览器自动化",
+  "summary": "Complete browser automation with Playwright. Auto-detects dev servers, writes cl…",
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "core",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, test login flows, check links, automate any browser task. Use when user wants to test websites, automate browser interactions, validate web functionality, or perform any browser-based testing.",
+    "keywords": [
+      "complete",
+      "browser",
+      "automation",
+      "playwright",
+      "auto-detects",
+      "dev",
+      "servers",
+      "writes",
+      "clean",
+      "test",
+      "scripts",
+      "tmp"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "runs-shell"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/affaan-m/ECC",
+    "commit": "f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

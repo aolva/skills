@@ -1,0 +1,52 @@
+{
+  "id": "unified-memory",
+  "title": "unified-memory",
+  "summary": "Share durable, inspectable context and handoffs between Claude, Codex, Hermes, C…",
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "core",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Share durable, inspectable context and handoffs between Claude, Codex, Hermes, Cursor, OpenCode, and other agents through the local ECC Memory Vault. Use when an agent must save work state, transfer context, resume another agent's task, or search shared project knowledge.",
+    "keywords": [
+      "share",
+      "durable",
+      "inspectable",
+      "context",
+      "handoffs",
+      "between",
+      "claude",
+      "codex",
+      "hermes",
+      "cursor",
+      "opencode",
+      "other"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/affaan-m/ECC",
+    "commit": "f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

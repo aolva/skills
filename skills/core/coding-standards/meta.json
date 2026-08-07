@@ -1,0 +1,52 @@
+{
+  "id": "coding-standards",
+  "title": "coding-standards",
+  "summary": "Baseline cross-project coding conventions for naming, readability, immutability,…",
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "core",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns.",
+    "keywords": [
+      "baseline",
+      "cross-project",
+      "coding",
+      "conventions",
+      "naming",
+      "readability",
+      "immutability",
+      "code-quality",
+      "review",
+      "detailed",
+      "frontend",
+      "backend"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/affaan-m/ECC",
+    "commit": "f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}
