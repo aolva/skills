@@ -1,0 +1,43 @@
+{
+  "title": "极简表达 · Caveman",
+  "summary": "压缩输出 token 约 65% 的沟通模式(支持 lite/full/ultra 与文言文档位),降本增效。",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "enabledByDefault": true,
+  "invokePolicy": "auto",
+  "sideEffects": [],
+  "routing": {
+    "description": "适用:用户要求省 token、简短回答、'caveman 模式'、低成本输出、长输出场景主动压缩表达;技术内容完整保留只删冗余。不适用:正式文案、营销稿、用户明确要求完整行文。",
+    "keywords": [
+      "省token",
+      "简短",
+      "caveman",
+      "压缩输出",
+      "低成本",
+      "less tokens",
+      "be brief",
+      "文言"
+    ],
+    "difficulty": "low",
+    "modelTierHint": "low",
+    "confidenceThreshold": 0.8
+  },
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": []
+  },
+  "provenance": {
+    "upstream": "https://github.com/JuliusBrussee/caveman",
+    "commit": "ec83e5bace4c20484d704dea21e12fc4eb94e9aa",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "仅 vendor skills/caveman 单技能(全仓另有 compress/stats 等附技能未收录)"
+    ]
+  },
+  "id": "caveman",
+  "tier": "core",
+  "entry": "SKILL.md"
+}

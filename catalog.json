@@ -1,6 +1,6 @@
 {
   "catalogVersion": "2026-08-07",
-  "generatedAt": "2026-08-07T18:23:24.750805Z",
+  "generatedAt": "2026-08-07T18:31:47.023947Z",
   "tiers": {
     "own": "自研/深度重写技能(核心,长期维护)",
     "core": "业界事实基建技能(默认内置)",
@@ -100,6 +100,254 @@
       },
       "sha256": "9e933c163c79dea9fd586b57cad03b04f674e22e06a2ccc38fd994d95321585d",
       "path": "skills/own/autoresearch"
+    },
+    {
+      "id": "caveman",
+      "title": "极简表达 · Caveman",
+      "summary": "压缩输出 token 约 65% 的沟通模式(支持 lite/full/ultra 与文言文档位),降本增效。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "auto",
+      "sideEffects": [],
+      "routing": {
+        "description": "适用:用户要求省 token、简短回答、'caveman 模式'、低成本输出、长输出场景主动压缩表达;技术内容完整保留只删冗余。不适用:正式文案、营销稿、用户明确要求完整行文。",
+        "keywords": [
+          "省token",
+          "简短",
+          "caveman",
+          "压缩输出",
+          "低成本",
+          "less tokens",
+          "be brief",
+          "文言"
+        ],
+        "difficulty": "low",
+        "modelTierHint": "low",
+        "confidenceThreshold": 0.8
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": []
+      },
+      "sha256": "a02f0baaaba9a914a5b755f97c34327ce15fffc823b4325915c4d7df9e420e88",
+      "path": "skills/core/caveman"
+    },
+    {
+      "id": "huashu-design",
+      "title": "华数设计 · HTML 原生设计",
+      "summary": "HTML/CSS 原生设计系统与网页/组件生成技能,中文语境,可直接产出可运行前端。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:网页/落地页/设计系统/UI 组件生成与改版,要求 HTML 原生实现而非截图;用户要'好看的前端/页面/组件'。不适用:非前端设计任务、无需代码产出的设计咨询。",
+        "keywords": [
+          "设计",
+          "前端",
+          "HTML",
+          "落地页",
+          "landing",
+          "组件",
+          "设计系统",
+          "网页",
+          "UI",
+          "华数"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "frontier",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "7d93ff2b9560a6de9d56ef370060e33eb83baef53374e2c5d55487f18db18bf2",
+      "path": "skills/core/huashu-design"
+    },
+    {
+      "id": "planning-with-files",
+      "title": "文件化规划 · Planning with Files",
+      "summary": "多步任务落成 task_plan/findings/progress 文件,防上下文丢失,清会话后自动恢复。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "core",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:任何需要 5+ 次工具调用的多步任务(项目开发、研究、调研),用户要求'规划/拆解/组织'工作,或长任务需要防上下文丢失。触发后按文件化计划推进并持续更新进度。不适用:一次性问答、单步任务、用户明确不要规划。",
+        "keywords": [
+          "规划",
+          "计划",
+          "plan",
+          "task_plan",
+          "多步任务",
+          "项目管理",
+          "进度",
+          "恢复",
+          "研究",
+          "project"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "c2b71d5840d86c365410cb6de3dca5bb61de6f7d05121e145f0d9a19caca3d81",
+      "path": "skills/core/planning-with-files"
+    },
+    {
+      "id": "chart-visualization",
+      "title": "AntV 图表生成",
+      "summary": "数据 → 柱状/折线/饼/散点/雷达/桑基/流程图等图表图片,AntV API 驱动。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:用户要把数据可视化(柱状图/折线图/饼图/散点/雷达/桑基/流程图/思维导图等),需要图表图片输出。不适用:无图表需求。",
+        "keywords": [
+          "图表",
+          "chart",
+          "可视化",
+          "柱状图",
+          "折线图",
+          "饼图",
+          "雷达图",
+          "桑基图",
+          "数据",
+          "AntV"
+        ],
+        "difficulty": "low",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [
+          "antv-api"
+        ],
+        "scopes": [],
+        "mcp": [],
+        "tools": []
+      },
+      "sha256": "2ddc0090a5dfbdd3149a5f035b5adbaf852784c59e6ad532b37feddea0b3aac9",
+      "path": "skills/extension/chart-visualization"
+    },
+    {
+      "id": "marketing-skills",
+      "title": "营销技能包 · Marketing Skills",
+      "summary": "49 个营销技能包:SEO/转化率/文案/增长分析/定价/冷邮件/发布策略等。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files",
+        "network"
+      ],
+      "routing": {
+        "description": "适用:营销/SEO/文案/CRO/定价/落地页优化/增长分析/获客/留存等增长类任务;入口 SKILL.md 按场景路由到 49 个子技能。不适用:与技术无关的纯闲聊。",
+        "keywords": [
+          "营销",
+          "marketing",
+          "SEO",
+          "文案",
+          "copywriting",
+          "转化率",
+          "CRO",
+          "增长",
+          "growth",
+          "定价",
+          "pricing",
+          "广告",
+          "ads",
+          "落地页"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "frontier",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "86d0ecdc63ae49645ac2df87d41f007307bf57bde6c82dd9a184083b1bdba05d",
+      "path": "skills/extension/marketing-skills"
+    },
+    {
+      "id": "mineru",
+      "title": "MinerU 文档解析",
+      "summary": "PDF/Office/图片 → Markdown(表格/公式/OCR),MinerU API 驱动,零配置,支持批处理。",
+      "category": "daily",
+      "version": "3.3.1",
+      "tier": "extension",
+      "enabledByDefault": false,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell",
+        "network"
+      ],
+      "routing": {
+        "description": "适用:PDF/Word/PPT/Excel/图片转 Markdown、提取表格/公式、OCR、批量文档处理(大文件/批处理需要 MINERU_TOKEN)。不适用:无文档解析需求。",
+        "keywords": [
+          "PDF",
+          "OCR",
+          "文档解析",
+          "Markdown",
+          "表格",
+          "公式",
+          "MinerU",
+          "文档转换",
+          "提取"
+        ],
+        "difficulty": "low",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [
+          "mineru-api"
+        ],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "1767f870b2054fd656ac47692446a46a916a7a23bec30ee974e07654ac38f34b",
+      "path": "skills/extension/mineru"
     }
   ]
 }

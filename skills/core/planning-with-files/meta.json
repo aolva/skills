@@ -1,0 +1,49 @@
+{
+  "title": "文件化规划 · Planning with Files",
+  "summary": "多步任务落成 task_plan/findings/progress 文件,防上下文丢失,清会话后自动恢复。",
+  "category": "developer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "enabledByDefault": true,
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "routing": {
+    "description": "适用:任何需要 5+ 次工具调用的多步任务(项目开发、研究、调研),用户要求'规划/拆解/组织'工作,或长任务需要防上下文丢失。触发后按文件化计划推进并持续更新进度。不适用:一次性问答、单步任务、用户明确不要规划。",
+    "keywords": [
+      "规划",
+      "计划",
+      "plan",
+      "task_plan",
+      "多步任务",
+      "项目管理",
+      "进度",
+      "恢复",
+      "研究",
+      "project"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/OthmanAdi/planning-with-files",
+    "commit": "ad1b6927e88359764a4f33720a46ae04e55ab120",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "按 Aolva 规范重写 meta;保留上游 hooks/scripts(面向 Claude Code,其他 agent 可忽略 hooks 仅用 SKILL.md 核心流程)"
+    ]
+  },
+  "id": "planning-with-files",
+  "tier": "core",
+  "entry": "SKILL.md"
+}

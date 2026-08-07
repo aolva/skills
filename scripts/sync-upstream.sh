@@ -20,6 +20,18 @@ source_id="${id}"
 case "$source_id" in
   autoresearch)
     repo="https://github.com/uditgoenka/autoresearch.git"; sub=".claude/skills/autoresearch" ;;
+  planning-with-files)
+    repo="https://github.com/OthmanAdi/planning-with-files.git"; sub=".agents/skills/planning-with-files" ;;
+  caveman)
+    repo="https://github.com/JuliusBrussee/caveman.git"; sub="skills/caveman" ;;
+  huashu-design)
+    repo="https://github.com/alchaincyf/huashu-design.git"; sub="" ;;
+  marketing-skills)
+    repo="https://github.com/coreyhaines31/marketingskills.git"; sub="skills" ;;
+  mineru)
+    repo="https://github.com/Nebutra/MinerU-Skill.git"; sub="skills/mineru" ;;
+  chart-visualization)
+    repo="https://github.com/antvis/chart-visualization-skills.git"; sub="skills/chart-visualization" ;;
   *) echo "未知 skill: $id (先在下方登记表补充来源)"; exit 1 ;;
 esac
 
@@ -27,7 +39,13 @@ tmp="$(mktemp -d)"; git clone --depth 1 "$repo" "$tmp/src"
 commit="$(git -C "$tmp/src" rev-parse HEAD)"
 dest="skills/$tier/$id"
 mkdir -p "$(dirname "$dest")"
-rsync -a --delete --exclude meta.json "$tmp/src/$sub/" "$dest/"
+# 通用媒体排除:音频/视频/大型二进制会撑爆技能库仓库与 App 下载
+rsync -a --delete \
+  --exclude meta.json \
+  --exclude '*.mp3' --exclude '*.wav' --exclude '*.ogg' \
+  --exclude '*.mp4' --exclude '*.mov' --exclude '*.mkv' \
+  --exclude '*.zip' --exclude '*.tar.gz' \
+  "$tmp/src/$sub/" "$dest/"
 rm -rf "$tmp"
 echo "vendored $id -> $tier @ $commit"
 echo ">> 回填 $dest/meta.json: tier=$tier, provenance.commit=$commit, 并人工核对内容/许可证"

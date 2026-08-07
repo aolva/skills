@@ -1,0 +1,50 @@
+{
+  "title": "AntV 图表生成",
+  "summary": "数据 → 柱状/折线/饼/散点/雷达/桑基/流程图等图表图片,AntV API 驱动。",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "enabledByDefault": false,
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "network",
+    "writes-files"
+  ],
+  "routing": {
+    "description": "适用:用户要把数据可视化(柱状图/折线图/饼图/散点/雷达/桑基/流程图/思维导图等),需要图表图片输出。不适用:无图表需求。",
+    "keywords": [
+      "图表",
+      "chart",
+      "可视化",
+      "柱状图",
+      "折线图",
+      "饼图",
+      "雷达图",
+      "桑基图",
+      "数据",
+      "AntV"
+    ],
+    "difficulty": "low",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "requires": {
+    "services": [
+      "antv-api"
+    ],
+    "scopes": [],
+    "mcp": [],
+    "tools": []
+  },
+  "provenance": {
+    "upstream": "https://github.com/antvis/chart-visualization-skills",
+    "commit": "b47f2feae59b1e792462d0edd8d1a7ea87c9bdfc",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "仅 vendor skills/chart-visualization 单技能(同仓另有 g2/g6/x6 维护类技能未收录)"
+    ]
+  },
+  "id": "chart-visualization",
+  "tier": "extension",
+  "entry": "SKILL.md"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "华数设计 · HTML 原生设计",
+  "summary": "HTML/CSS 原生设计系统与网页/组件生成技能,中文语境,可直接产出可运行前端。",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "enabledByDefault": true,
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "routing": {
+    "description": "适用:网页/落地页/设计系统/UI 组件生成与改版,要求 HTML 原生实现而非截图;用户要'好看的前端/页面/组件'。不适用:非前端设计任务、无需代码产出的设计咨询。",
+    "keywords": [
+      "设计",
+      "前端",
+      "HTML",
+      "落地页",
+      "landing",
+      "组件",
+      "设计系统",
+      "网页",
+      "UI",
+      "华数"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "frontier",
+    "confidenceThreshold": 0.75
+  },
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/alchaincyf/huashu-design",
+    "commit": "1572d431f1411c82ec0baea94dea6a45f6063b26",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "裁剪非核心大媒体(bgm mp3 约 24MB)保持技能库轻量,设计资产/脚本完整保留"
+    ]
+  },
+  "id": "huashu-design",
+  "tier": "core",
+  "entry": "SKILL.md"
+}

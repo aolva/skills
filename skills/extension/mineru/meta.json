@@ -1,0 +1,51 @@
+{
+  "title": "MinerU 文档解析",
+  "summary": "PDF/Office/图片 → Markdown(表格/公式/OCR),MinerU API 驱动,零配置,支持批处理。",
+  "category": "daily",
+  "version": "3.3.1",
+  "license": "MIT",
+  "enabledByDefault": false,
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "runs-shell",
+    "network"
+  ],
+  "routing": {
+    "description": "适用:PDF/Word/PPT/Excel/图片转 Markdown、提取表格/公式、OCR、批量文档处理(大文件/批处理需要 MINERU_TOKEN)。不适用:无文档解析需求。",
+    "keywords": [
+      "PDF",
+      "OCR",
+      "文档解析",
+      "Markdown",
+      "表格",
+      "公式",
+      "MinerU",
+      "文档转换",
+      "提取"
+    ],
+    "difficulty": "low",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "requires": {
+    "services": [
+      "mineru-api"
+    ],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/Nebutra/MinerU-Skill",
+    "commit": "c5f4536f7d9c25a0938c7219d8e0abc023b8e6cd",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "按 Aolva 规范重写 meta;requires.services 声明 mineru-api 依赖"
+    ]
+  },
+  "id": "mineru",
+  "tier": "extension",
+  "entry": "SKILL.md"
+}

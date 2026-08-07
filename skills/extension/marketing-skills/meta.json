@@ -1,0 +1,54 @@
+{
+  "title": "营销技能包 · Marketing Skills",
+  "summary": "49 个营销技能包:SEO/转化率/文案/增长分析/定价/冷邮件/发布策略等。",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "enabledByDefault": false,
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files",
+    "network"
+  ],
+  "routing": {
+    "description": "适用:营销/SEO/文案/CRO/定价/落地页优化/增长分析/获客/留存等增长类任务;入口 SKILL.md 按场景路由到 49 个子技能。不适用:与技术无关的纯闲聊。",
+    "keywords": [
+      "营销",
+      "marketing",
+      "SEO",
+      "文案",
+      "copywriting",
+      "转化率",
+      "CRO",
+      "增长",
+      "growth",
+      "定价",
+      "pricing",
+      "广告",
+      "ads",
+      "落地页"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "frontier",
+    "confidenceThreshold": 0.7
+  },
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/coreyhaines31/marketingskills",
+    "commit": "7868cb9251fad80a73d26e488a5ad5f6c4a9f335",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "整包 vendor 49 个子技能;入口 SKILL.md 由 Aolva 重写为索引路由"
+    ]
+  },
+  "id": "marketing-skills",
+  "tier": "extension",
+  "entry": "SKILL.md"
+}
