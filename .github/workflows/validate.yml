@@ -11,4 +11,4 @@ jobs:
       - run: python scripts/validate.py
       - run: python scripts/build-catalog.py
       - name: fail if catalog.json out of date
-        run: git diff --exit-code catalog.json
+        run: git diff --ignore-matching-lines='generatedAt' --exit-code catalog.json

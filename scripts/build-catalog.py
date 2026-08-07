@@ -7,11 +7,22 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKILLS = ROOT / "skills"
 
 def dir_hash(d: pathlib.Path) -> str:
+    """Deterministic content hash: same bytes in -> same digest on any OS.
+
+    Skips runtime/py artifacts (bytecode caches, Finder metadata) so the
+    digest is stable whether or not the skill was executed locally.
+    """
     h = hashlib.sha256()
     for f in sorted(d.rglob("*")):
-        if f.is_file():
-            h.update(f.relative_to(d).as_posix().encode())
-            h.update(f.read_bytes())
+        if not f.is_file():
+            continue
+        rel = f.relative_to(d).as_posix()
+        if "__pycache__" in rel.split("/") or rel.endswith((".pyc", ".pyo")):
+            continue
+        if rel.endswith(".DS_Store"):
+            continue
+        h.update(rel.encode())
+        h.update(f.read_bytes())
     return h.hexdigest()
 
 skills = []

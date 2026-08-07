@@ -1,6 +1,6 @@
 {
   "catalogVersion": "2026-08-07",
-  "generatedAt": "2026-08-07T17:35:08.509074Z",
+  "generatedAt": "2026-08-07T17:48:08.554790Z",
   "skills": [
     {
       "id": "aolva-ppt",
@@ -45,7 +45,7 @@
           "python3"
         ]
       },
-      "sha256": "c52f62ce6e3a9ffdf3044112990a57dacc71a967da3afcd80a1f694e4ec4bdb3",
+      "sha256": "c9da584d9cc86f6cd6ae8128f40b77268938a92c3144753dd0242511e81245db",
       "path": "skills/aolva-ppt"
     },
     {
