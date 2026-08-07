@@ -1,0 +1,52 @@
+{
+  "id": "markitdown",
+  "title": "markitdown",
+  "summary": "Convert heterogeneous documents and selected URIs to Markdown with Microsoft Mar…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Convert heterogeneous documents and selected URIs to Markdown with Microsoft MarkItDown for text analysis, search, and LLM/RAG ingestion. Covers safe local conversion, streams, Office/PDF/data formats, batch workflows, plugins, vision OCR, Azure extraction, and the official MCP server.",
+    "keywords": [
+      "convert",
+      "heterogeneous",
+      "documents",
+      "selected",
+      "uris",
+      "markdown",
+      "microsoft",
+      "markitdown",
+      "text",
+      "analysis",
+      "search",
+      "llm"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "runs-shell"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "commit": "d767725c6e93b1d02a220e6be75b261a9833ede5",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

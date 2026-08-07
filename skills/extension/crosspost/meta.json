@@ -1,0 +1,52 @@
+{
+  "id": "crosspost",
+  "title": "crosspost",
+  "summary": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Ad…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Adapts content per platform using content-engine patterns. Never posts identical content cross-platform. Use when the user wants to distribute content across social platforms.",
+    "keywords": [
+      "multi-platform",
+      "content",
+      "distribution",
+      "across",
+      "linkedin",
+      "threads",
+      "bluesky",
+      "adapts",
+      "per",
+      "platform",
+      "content-engine",
+      "patterns"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/affaan-m/ECC",
+    "commit": "f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

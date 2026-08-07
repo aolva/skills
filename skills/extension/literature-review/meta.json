@@ -1,0 +1,52 @@
+{
+  "id": "literature-review",
+  "title": "literature-review",
+  "summary": "Conduct comprehensive, systematic literature reviews using multiple academic dat…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Conduct comprehensive, systematic literature reviews using multiple academic databases (PubMed, arXiv, bioRxiv, Semantic Scholar, etc.). This skill should be used when conducting systematic literature reviews, meta-analyses, research synthesis, or comprehensive literature searches across biomedical, scientific, and technical domains. Creates professionally formatted markdown documents and PDFs with verified citations in multiple citation styles (APA, Nature, Vancouver, etc.).",
+    "keywords": [
+      "conduct",
+      "comprehensive",
+      "systematic",
+      "literature",
+      "reviews",
+      "multiple",
+      "academic",
+      "databases",
+      "pubmed",
+      "arxiv",
+      "biorxiv",
+      "semantic"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "network"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "commit": "d767725c6e93b1d02a220e6be75b261a9833ede5",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

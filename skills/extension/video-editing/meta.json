@@ -1,0 +1,52 @@
+{
+  "id": "video-editing",
+  "title": "video-editing",
+  "summary": "AI-assisted video editing workflows for cutting, structuring, and augmenting rea…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage. Covers the full pipeline from raw capture through FFmpeg, Remotion, ElevenLabs, fal.ai, and final polish in Descript or CapCut. Use when the user wants to edit video, cut footage, create vlogs, or build video content.",
+    "keywords": [
+      "ai-assisted",
+      "video",
+      "editing",
+      "workflows",
+      "cutting",
+      "structuring",
+      "augmenting",
+      "real",
+      "footage",
+      "covers",
+      "full",
+      "pipeline"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "runs-shell"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/affaan-m/ECC",
+    "commit": "f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "pptx-posters",
+  "title": "pptx-posters",
+  "summary": "Create and audit editable scientific posters in macro-free PowerPoint (.pptx) fr…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Create and audit editable scientific posters in macro-free PowerPoint (.pptx) from author-approved local content and assets. Use when the requested deliverable is a PowerPoint research/conference poster and exact physical, printer, accessibility, provenance, and package-security checks are required.",
+    "keywords": [
+      "create",
+      "audit",
+      "editable",
+      "scientific",
+      "posters",
+      "macro-free",
+      "powerpoint",
+      "pptx",
+      "author-approved",
+      "local",
+      "content",
+      "assets"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "commit": "d767725c6e93b1d02a220e6be75b261a9833ede5",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

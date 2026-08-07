@@ -1,0 +1,52 @@
+{
+  "id": "matplotlib",
+  "title": "matplotlib",
+  "summary": "Low-level plotting library for full customization. Use when you need fine-graine…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Low-level plotting library for full customization. Use when you need fine-grained control over every plot element, creating novel plot types, or integrating with specific scientific workflows. Export to PNG/PDF/SVG for publication. For quick statistical plots use seaborn; for interactive plots use plotly; for publication-ready multi-panel figures with journal styling, use scientific-visualization.",
+    "keywords": [
+      "low-level",
+      "plotting",
+      "library",
+      "full",
+      "customization",
+      "fine-grained",
+      "control",
+      "over",
+      "every",
+      "plot",
+      "element",
+      "creating"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "runs-shell"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "commit": "d767725c6e93b1d02a220e6be75b261a9833ede5",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

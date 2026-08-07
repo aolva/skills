@@ -1,0 +1,52 @@
+{
+  "id": "eval-harness",
+  "title": "eval-harness",
+  "summary": "Formal evaluation framework for Claude Code sessions implementing eval-driven de…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
+    "keywords": [
+      "formal",
+      "evaluation",
+      "framework",
+      "claude",
+      "code",
+      "sessions",
+      "implementing",
+      "eval-driven",
+      "development",
+      "edd",
+      "principles",
+      "eval-harness"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/affaan-m/ECC",
+    "commit": "f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

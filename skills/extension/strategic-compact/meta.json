@@ -1,0 +1,52 @@
+{
+  "id": "strategic-compact",
+  "title": "strategic-compact",
+  "summary": "Suggests manual context compaction at logical intervals to preserve context thro…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.",
+    "keywords": [
+      "suggests",
+      "manual",
+      "context",
+      "compaction",
+      "logical",
+      "intervals",
+      "preserve",
+      "through",
+      "task",
+      "phases",
+      "rather",
+      "than"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/affaan-m/ECC",
+    "commit": "f16a6ff2a684cbdc455695c6681e5fd7d8199b3e",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "media-studio",
+  "title": "muapi-media-generation",
+  "summary": "Generate AI images, videos, music, and audio from the terminal via muapi.ai — su…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Generate AI images, videos, music, and audio from the terminal via muapi.ai — supports 100+ models including Flux, Midjourney v7, Kling 3.0, Veo3, and Suno V5",
+    "keywords": [
+      "generate",
+      "images",
+      "videos",
+      "music",
+      "audio",
+      "terminal",
+      "muapi",
+      "supports",
+      "models",
+      "including",
+      "flux",
+      "midjourney"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "network",
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/SamurAIGPT/Generative-Media-Skills",
+    "commit": "453d5157b5900918c11c455d3b05c42a3a7f0bd3",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "api-test-suite-builder",
+  "title": "api-test-suite-builder",
+  "summary": "Use when the user asks to generate API tests, create integration test suites, te…",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Use when the user asks to generate API tests, create integration test suites, test REST endpoints, or build contract tests.",
+    "keywords": [
+      "asks",
+      "generate",
+      "api",
+      "tests",
+      "create",
+      "integration",
+      "test",
+      "suites",
+      "rest",
+      "endpoints",
+      "build",
+      "contract"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "writes-files",
+    "runs-shell"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/alirezarezvani/claude-skills",
+    "commit": "aa8d778811a557a2c28ccadda4cf3d0bd028a4cc",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}

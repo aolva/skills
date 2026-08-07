@@ -1,0 +1,53 @@
+{
+  "id": "media-platform",
+  "title": "muapi-platform",
+  "summary": "Setup and utility scripts for muapi.ai — configure API keys, test connectivity, …",
+  "category": "daily",
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "extension",
+  "enabledByDefault": false,
+  "entry": "SKILL.md",
+  "routing": {
+    "description": "Setup and utility scripts for muapi.ai — configure API keys, test connectivity, and poll for async generation results",
+    "keywords": [
+      "setup",
+      "utility",
+      "scripts",
+      "muapi",
+      "configure",
+      "api",
+      "keys",
+      "test",
+      "connectivity",
+      "poll",
+      "async",
+      "generation"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  },
+  "invokePolicy": "suggest",
+  "sideEffects": [
+    "network",
+    "writes-files"
+  ],
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": "https://github.com/SamurAIGPT/Generative-Media-Skills",
+    "commit": "453d5157b5900918c11c455d3b05c42a3a7f0bd3",
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "批量 vendor 入库:自动生成 meta.json(frontmatter 抽取 routing 语料)",
+      "同步时剔除大媒体与上游 .git"
+    ]
+  }
+}
