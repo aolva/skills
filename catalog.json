@@ -1,12 +1,53 @@
 {
   "catalogVersion": "2026-08-07",
-  "generatedAt": "2026-08-07T18:45:35.653391Z",
+  "generatedAt": "2026-08-07T18:53:15.747356Z",
   "tiers": {
     "own": "自研/深度重写技能(核心,长期维护)",
     "core": "业界事实基建技能(默认内置)",
     "extension": "优质开源技能(按需安装)"
   },
   "skills": [
+    {
+      "id": "aolva-agent-observability",
+      "title": "Agent 观测 · Observability",
+      "summary": "agent 任务的服务调用(token/成本/延迟)统计与归因,口径来自 ai-gateway 与算力路由。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:看用量/算成本/查调用记录/按任务或技能归因/成本优化建议。不适用:无观测数据需求的开发任务。",
+        "keywords": [
+          "观测",
+          "遥测",
+          "成本",
+          "token",
+          "用量",
+          "归因",
+          "observability",
+          "计量",
+          "调用"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "0fac7e897046a4fe161d07270ff4c4a3c3fa19a7617a285a21a368bd8d06a935",
+      "path": "skills/own/aolva-agent-observability"
+    },
     {
       "id": "aolva-api-test",
       "title": "API 测试 · API Test",
@@ -204,6 +245,47 @@
       },
       "sha256": "30b32ee40a3e3e08634129a038e6ecd89c4b433ff497b3f8d2cd86c92ef32eea",
       "path": "skills/own/aolva-doc-qa"
+    },
+    {
+      "id": "aolva-eval-qa",
+      "title": "质量评测 · Eval QA",
+      "summary": "模型输出/技能产出/视觉渲染的多维度评测与回归基线,每个质量判断可复现。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files",
+        "network"
+      ],
+      "routing": {
+        "description": "适用:测效果/质检/评估质量/验收/建立评测基线(含视觉质检、多模态核验)。不适用:无验收目标的普通开发。",
+        "keywords": [
+          "评测",
+          "质检",
+          "验收",
+          "eval",
+          "QA",
+          "视觉质检",
+          "回归",
+          "基线",
+          "多模态"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "frontier",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "2cfc174814337739ae0b17f34d1c8c75822a76537202f4727f03a457911200e6",
+      "path": "skills/own/aolva-eval-qa"
     },
     {
       "id": "aolva-git-ops",

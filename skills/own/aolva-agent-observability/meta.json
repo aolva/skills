@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-agent-observability",
+  "title": "Agent 观测 · Observability",
+  "summary": "agent 任务的服务调用(token/成本/延迟)统计与归因,口径来自 ai-gateway 与算力路由。",
+  "category": "developer",
+  "sideEffects": [
+    "network",
+    "writes-files"
+  ],
+  "routing": {
+    "description": "适用:看用量/算成本/查调用记录/按任务或技能归因/成本优化建议。不适用:无观测数据需求的开发任务。",
+    "keywords": [
+      "观测",
+      "遥测",
+      "成本",
+      "token",
+      "用量",
+      "归因",
+      "observability",
+      "计量",
+      "调用"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.7
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-eval-qa",
+  "title": "质量评测 · Eval QA",
+  "summary": "模型输出/技能产出/视觉渲染的多维度评测与回归基线,每个质量判断可复现。",
+  "category": "developer",
+  "sideEffects": [
+    "writes-files",
+    "network"
+  ],
+  "routing": {
+    "description": "适用:测效果/质检/评估质量/验收/建立评测基线(含视觉质检、多模态核验)。不适用:无验收目标的普通开发。",
+    "keywords": [
+      "评测",
+      "质检",
+      "验收",
+      "eval",
+      "QA",
+      "视觉质检",
+      "回归",
+      "基线",
+      "多模态"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "frontier",
+    "confidenceThreshold": 0.7
+  }
+}
