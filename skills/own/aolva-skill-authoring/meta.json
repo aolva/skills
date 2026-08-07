@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-skill-authoring",
+  "title": "技能作者 · Skill Authoring",
+  "summary": "按三层技能库规范编写/测试/发布技能:meta 契约、准入校验、vendor 与批量入库流程。",
+  "category": "developer",
+  "sideEffects": [
+    "writes-files",
+    "runs-shell"
+  ],
+  "routing": {
+    "description": "适用:写新技能/把开源技能 vendor 进 Aolva 技能库/改造技能/技能库治理操作。不适用:与技能库无关的普通开发。",
+    "keywords": [
+      "技能",
+      "skill",
+      "vendor",
+      "meta.json",
+      "技能库",
+      "SKILL.md",
+      "入库",
+      "authoring"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}

@@ -1,6 +1,6 @@
 {
   "catalogVersion": "2026-08-07",
-  "generatedAt": "2026-08-07T18:40:34.003835Z",
+  "generatedAt": "2026-08-07T18:45:35.653391Z",
   "tiers": {
     "own": "自研/深度重写技能(核心,长期维护)",
     "core": "业界事实基建技能(默认内置)",
@@ -45,6 +45,47 @@
       },
       "sha256": "e7c8f418d37676e6464daa284b1fad298642045e1bb37038ba1ce269021390da",
       "path": "skills/own/aolva-api-test"
+    },
+    {
+      "id": "aolva-billing-ops",
+      "title": "计费订阅 · Billing Ops",
+      "summary": "订阅/用量计费(含算力路由口径):价格配置、账实核对、退款与影响面,金额敏感操作留痕。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:付费/订阅/套餐/价格/订单/账单/退款/用量核对任务,含 NewAPI 算力计费口径。不适用:非计费域的普通开发。",
+        "keywords": [
+          "计费",
+          "订阅",
+          "billing",
+          "套餐",
+          "账单",
+          "退款",
+          "用量",
+          "算力计费",
+          "NewAPI"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "d5e06e0756fb918eb5832bd6b5ba3006913ba41a77dfe1db5f4570c740ab1b11",
+      "path": "skills/own/aolva-billing-ops"
     },
     {
       "id": "aolva-code-review",
@@ -204,6 +245,45 @@
       "path": "skills/own/aolva-git-ops"
     },
     {
+      "id": "aolva-identity-ops",
+      "title": "身份访问 · Identity Ops",
+      "summary": "对接 Clerk + login.lumwe.com 共享身份基建:登录态/用户体系/权限/会话,防越权防泄密。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network"
+      ],
+      "routing": {
+        "description": "适用:登录/注册/用户体系/权限/会话/鉴权配置类任务;涉及 Clerk 与共享登录中心。不适用:与身份无关的纯前端样式。",
+        "keywords": [
+          "身份",
+          "Clerk",
+          "登录",
+          "权限",
+          "会话",
+          "鉴权",
+          "login.lumwe.com",
+          "用户体系"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "18299ae1052c1621dfa9f758e52da5be148fe13d5b258a00dcd366fc5cf0b5a5",
+      "path": "skills/own/aolva-identity-ops"
+    },
+    {
       "id": "aolva-llm-gateway",
       "title": "LLM 网关 · Aolva AI Gateway",
       "summary": "对接 Platform ai-gateway(LiteLLM 底座)的统一模型调用:档位选型/请求契约/限流降级,禁止绕过网关直连。",
@@ -284,6 +364,47 @@
       "path": "skills/own/aolva-local-compute"
     },
     {
+      "id": "aolva-ocr-pipeline",
+      "title": "OCR 管线 · OCR Pipeline",
+      "summary": "对接 Nurbell document-intelligence:扫描件识别/字段抽取/结构化,数字零容忍、出处必标。",
+      "category": "daily",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:扫描件识别、票据/证件/报表字段抽取与结构化、OCR 质量验证。不适用:无文档输入的一般问答。",
+        "keywords": [
+          "OCR",
+          "扫描件",
+          "识别",
+          "字段抽取",
+          "发票",
+          "证件",
+          "票据",
+          "Nurbell",
+          "文档智能"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "dad455dff0b9e722e1bc179cc3d67aa931373afb57d24acb5014b3857093ab10",
+      "path": "skills/own/aolva-ocr-pipeline"
+    },
+    {
       "id": "aolva-ppt",
       "title": "PPT/演示文稿 · Aolva PPT",
       "summary": "生成可编辑 PPTD + 本地纯 Python 导出 PPTX(零 Node/浏览器/Kimi 依赖,自研引擎,不会随上游失效)。",
@@ -329,6 +450,128 @@
       },
       "sha256": "52a0c9237089f9c95c8ca29d2419a858975576bb8c3c80336d9119fcc14d6cb3",
       "path": "skills/own/aolva-ppt"
+    },
+    {
+      "id": "aolva-rag-ops",
+      "title": "知识库与 RAG · RAG Ops",
+      "summary": "平台检索增强链路:本地 embedding + ai-gateway 生成,入库/检索/引用/评测全流程可溯源。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "network",
+        "runs-shell",
+        "writes-files"
+      ],
+      "routing": {
+        "description": "适用:知识库建设/RAG/给AI接文档/检索增强/向量化任务。不适用:无检索增强需求的简单问答。",
+        "keywords": [
+          "RAG",
+          "知识库",
+          "embedding",
+          "向量",
+          "检索",
+          "引用",
+          "问答",
+          "向量库"
+        ],
+        "difficulty": "high",
+        "modelTierHint": "frontier",
+        "confidenceThreshold": 0.7
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "f41c4bb7b5f3fdf106c4be381c134ec9f022c034d53cb97ae5bca1215bba5324",
+      "path": "skills/own/aolva-rag-ops"
+    },
+    {
+      "id": "aolva-release-ops",
+      "title": "发布交付 · Release Ops",
+      "summary": "统一发布纪律:检查单/灰度/回滚预案/留痕,每次发布可解释、可回滚、可追溯。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "runs-shell",
+        "network"
+      ],
+      "routing": {
+        "description": "适用:发布/上线/部署/灰度/回滚/版本管理任务。不适用:无发布动作的日常开发。",
+        "keywords": [
+          "发布",
+          "上线",
+          "部署",
+          "灰度",
+          "回滚",
+          "release",
+          "deploy",
+          "CI",
+          "版本"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "40b690b748448aa559a8cc50b76cbae73846424afab8486f9f50094b7e95004a",
+      "path": "skills/own/aolva-release-ops"
+    },
+    {
+      "id": "aolva-skill-authoring",
+      "title": "技能作者 · Skill Authoring",
+      "summary": "按三层技能库规范编写/测试/发布技能:meta 契约、准入校验、vendor 与批量入库流程。",
+      "category": "developer",
+      "version": "1.0.0",
+      "tier": "own",
+      "enabledByDefault": true,
+      "invokePolicy": "suggest",
+      "sideEffects": [
+        "writes-files",
+        "runs-shell"
+      ],
+      "routing": {
+        "description": "适用:写新技能/把开源技能 vendor 进 Aolva 技能库/改造技能/技能库治理操作。不适用:与技能库无关的普通开发。",
+        "keywords": [
+          "技能",
+          "skill",
+          "vendor",
+          "meta.json",
+          "技能库",
+          "SKILL.md",
+          "入库",
+          "authoring"
+        ],
+        "difficulty": "mid",
+        "modelTierHint": "mid",
+        "confidenceThreshold": 0.75
+      },
+      "requires": {
+        "services": [],
+        "scopes": [],
+        "mcp": [],
+        "tools": [
+          "shell"
+        ]
+      },
+      "sha256": "4ae698cd8f86dd7215033ae06b5d4f6852ad0dccd9a721d320d55c324b8b7ff3",
+      "path": "skills/own/aolva-skill-authoring"
     },
     {
       "id": "aolva-web-research",

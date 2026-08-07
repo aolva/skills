@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-rag-ops",
+  "title": "知识库与 RAG · RAG Ops",
+  "summary": "平台检索增强链路:本地 embedding + ai-gateway 生成,入库/检索/引用/评测全流程可溯源。",
+  "category": "developer",
+  "sideEffects": [
+    "network",
+    "runs-shell",
+    "writes-files"
+  ],
+  "routing": {
+    "description": "适用:知识库建设/RAG/给AI接文档/检索增强/向量化任务。不适用:无检索增强需求的简单问答。",
+    "keywords": [
+      "RAG",
+      "知识库",
+      "embedding",
+      "向量",
+      "检索",
+      "引用",
+      "问答",
+      "向量库"
+    ],
+    "difficulty": "high",
+    "modelTierHint": "frontier",
+    "confidenceThreshold": 0.7
+  }
+}

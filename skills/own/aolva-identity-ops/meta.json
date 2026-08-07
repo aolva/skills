@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-identity-ops",
+  "title": "身份访问 · Identity Ops",
+  "summary": "对接 Clerk + login.lumwe.com 共享身份基建:登录态/用户体系/权限/会话,防越权防泄密。",
+  "category": "developer",
+  "sideEffects": [
+    "network"
+  ],
+  "routing": {
+    "description": "适用:登录/注册/用户体系/权限/会话/鉴权配置类任务;涉及 Clerk 与共享登录中心。不适用:与身份无关的纯前端样式。",
+    "keywords": [
+      "身份",
+      "Clerk",
+      "登录",
+      "权限",
+      "会话",
+      "鉴权",
+      "login.lumwe.com",
+      "用户体系"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}

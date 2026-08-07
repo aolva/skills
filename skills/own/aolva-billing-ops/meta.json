@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-billing-ops",
+  "title": "计费订阅 · Billing Ops",
+  "summary": "订阅/用量计费(含算力路由口径):价格配置、账实核对、退款与影响面,金额敏感操作留痕。",
+  "category": "developer",
+  "sideEffects": [
+    "network",
+    "writes-files"
+  ],
+  "routing": {
+    "description": "适用:付费/订阅/套餐/价格/订单/账单/退款/用量核对任务,含 NewAPI 算力计费口径。不适用:非计费域的普通开发。",
+    "keywords": [
+      "计费",
+      "订阅",
+      "billing",
+      "套餐",
+      "账单",
+      "退款",
+      "用量",
+      "算力计费",
+      "NewAPI"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}

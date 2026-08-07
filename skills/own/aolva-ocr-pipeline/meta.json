@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-ocr-pipeline",
+  "title": "OCR 管线 · OCR Pipeline",
+  "summary": "对接 Nurbell document-intelligence:扫描件识别/字段抽取/结构化,数字零容忍、出处必标。",
+  "category": "daily",
+  "sideEffects": [
+    "network",
+    "writes-files"
+  ],
+  "routing": {
+    "description": "适用:扫描件识别、票据/证件/报表字段抽取与结构化、OCR 质量验证。不适用:无文档输入的一般问答。",
+    "keywords": [
+      "OCR",
+      "扫描件",
+      "识别",
+      "字段抽取",
+      "发票",
+      "证件",
+      "票据",
+      "Nurbell",
+      "文档智能"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}

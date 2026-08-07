@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "tier": "own",
+  "enabledByDefault": true,
+  "entry": "SKILL.md",
+  "invokePolicy": "suggest",
+  "requires": {
+    "services": [],
+    "scopes": [],
+    "mcp": [],
+    "tools": [
+      "shell"
+    ]
+  },
+  "provenance": {
+    "upstream": null,
+    "commit": null,
+    "upstreamLicense": "MIT",
+    "adaptations": [
+      "Aolva 自研技能:零上游依赖,纯原创提示词方法论"
+    ]
+  },
+  "id": "aolva-release-ops",
+  "title": "发布交付 · Release Ops",
+  "summary": "统一发布纪律:检查单/灰度/回滚预案/留痕,每次发布可解释、可回滚、可追溯。",
+  "category": "developer",
+  "sideEffects": [
+    "runs-shell",
+    "network"
+  ],
+  "routing": {
+    "description": "适用:发布/上线/部署/灰度/回滚/版本管理任务。不适用:无发布动作的日常开发。",
+    "keywords": [
+      "发布",
+      "上线",
+      "部署",
+      "灰度",
+      "回滚",
+      "release",
+      "deploy",
+      "CI",
+      "版本"
+    ],
+    "difficulty": "mid",
+    "modelTierHint": "mid",
+    "confidenceThreshold": 0.75
+  }
+}
