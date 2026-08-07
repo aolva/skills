@@ -10,6 +10,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 schema = json.loads((ROOT / "schema/skill.meta.schema.json").read_text(encoding="utf-8"))
 errors = 0
 
+# 来源合规决策矩阵(§3):core/extension 只收宽松许可;copyleft 与无声明只允许 clean-room 进 own/
+PERMISSIVE = {"MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC",
+              "0BSD", "Unlicense", "CC0-1.0", "Zlib"}
+COPYLEFT = {"GPL-2.0", "GPL-2.0-only", "GPL-2.0-or-later", "GPL-3.0", "GPL-3.0-only",
+            "GPL-3.0-or-later", "AGPL-3.0", "AGPL-3.0-only", "AGPL-3.0-or-later",
+            "LGPL-2.1", "LGPL-2.1-only", "LGPL-3.0", "LGPL-3.0-only", "MPL-2.0",
+            "SSPL-1.0", "EPL-2.0", "EUPL-1.2"}
+
 # tier 准入规则:core/extension 必须记录来源与许可;core 必须是默认内置
 def tier_admission(m):
     msgs = []
@@ -18,13 +26,20 @@ def tier_admission(m):
         msgs.append(f"tier={tier!r} 非法(own/core/extension)")
         return msgs
     prov = m.get("provenance", {})
+    license_id = m.get("license")
     if tier in ("core", "extension") and not prov.get("upstream"):
         msgs.append(f"{tier} 库技能必须有 provenance.upstream(vendor 来源)")
     if tier == "core":
         if not m.get("enabledByDefault"):
             msgs.append("core 库技能必须 enabledByDefault=true")
-        if not m.get("license"):
+        if not license_id:
             msgs.append("core 库技能必须有明确 license")
+    # 决策矩阵:vendor 只允许宽松许可
+    if tier in ("core", "extension"):
+        if license_id not in PERMISSIVE:
+            msgs.append(f"{tier} 库 license={license_id!r} 不在宽松白名单 {sorted(PERMISSIVE)};copyleft/无许可来源只能 clean-room 进 own/")
+        if license_id in COPYLEFT:
+            msgs.append(f"copyleft({license_id}) 不得 vendor;如确需请 clean-room 重写进 own/")
     # 自研库的来源标注约束
     if tier == "own":
         has_upstream = bool(prov.get("upstream"))
@@ -33,8 +48,6 @@ def tier_admission(m):
             msgs.append("own 技能不得同时标注 upstream 与 inspiredBy(二选一:改造自开源 / 独立重写)")
         if has_upstream and not prov.get("upstreamLicense"):
             msgs.append("改造自开源(upstream)的 own 技能必须记录 upstreamLicense")
-        if has_inspired and m.get("license") == "MIT" and not has_upstream:
-            pass  # clean-room 重写可自持 MIT
     else:
         if prov.get("inspiredBy"):
             msgs.append(f"{tier} 库不允许 inspiredBy 标注——非自研库只能 vendor(upstream)")
