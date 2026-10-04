@@ -2,7 +2,7 @@
   "title": "华数设计 · HTML 原生设计",
   "summary": "HTML/CSS 原生设计系统与网页/组件生成技能,中文语境,可直接产出可运行前端。",
   "category": "daily",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "enabledByDefault": true,
   "invokePolicy": "suggest",

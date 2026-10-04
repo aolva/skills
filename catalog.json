@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "2026-08-07",
-  "generatedAt": "2026-08-07T18:56:32.650028Z",
+  "catalogVersion": "2026-10-04",
+  "generatedAt": "2026-10-04T20:02:39.806783Z",
   "tiers": {
     "own": "自研/深度重写技能(核心,长期维护)",
     "core": "业界事实基建技能(默认内置)",
@@ -1283,7 +1283,7 @@
           "shell"
         ]
       },
-      "sha256": "9088252ca948021de90b7ec5ebac53d7044785f9747e448629b2c34ab24012a1",
+      "sha256": "8c51616e9b81c60467df9daaff897107a4cac48892ed064c3053f99a3be73e0c",
       "path": "skills/core/huashu-design"
     },
     {
