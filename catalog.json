@@ -1250,7 +1250,7 @@
       "title": "华数设计 · HTML 原生设计",
       "summary": "HTML/CSS 原生设计系统与网页/组件生成技能,中文语境,可直接产出可运行前端。",
       "category": "daily",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "tier": "core",
       "enabledByDefault": true,
       "invokePolicy": "suggest",
@@ -1283,7 +1283,7 @@
           "shell"
         ]
       },
-      "sha256": "7d93ff2b9560a6de9d56ef370060e33eb83baef53374e2c5d55487f18db18bf2",
+      "sha256": "9088252ca948021de90b7ec5ebac53d7044785f9747e448629b2c34ab24012a1",
       "path": "skills/core/huashu-design"
     },
     {
