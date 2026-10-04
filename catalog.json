@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "2026-08-07",
-  "generatedAt": "2026-08-07T18:56:32.650028Z",
+  "catalogVersion": "2026-10-04",
+  "generatedAt": "2026-10-04T20:02:39.806783Z",
   "tiers": {
     "own": "自研/深度重写技能(核心,长期维护)",
     "core": "业界事实基建技能(默认内置)",
@@ -1250,7 +1250,7 @@
       "title": "华数设计 · HTML 原生设计",
       "summary": "HTML/CSS 原生设计系统与网页/组件生成技能,中文语境,可直接产出可运行前端。",
       "category": "daily",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "tier": "core",
       "enabledByDefault": true,
       "invokePolicy": "suggest",
@@ -1283,7 +1283,7 @@
           "shell"
         ]
       },
-      "sha256": "7d93ff2b9560a6de9d56ef370060e33eb83baef53374e2c5d55487f18db18bf2",
+      "sha256": "8c51616e9b81c60467df9daaff897107a4cac48892ed064c3053f99a3be73e0c",
       "path": "skills/core/huashu-design"
     },
     {
